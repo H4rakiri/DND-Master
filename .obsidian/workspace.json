@@ -96,7 +96,7 @@
               "type": "loot-generator-view",
               "state": {},
               "icon": "lucide-file",
-              "title": "Плагин больше не активен"
+              "title": "Генератор добычи"
             }
           },
           {
@@ -105,8 +105,8 @@
             "state": {
               "type": "DICE_ROLLER_VIEW",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Плагин больше не активен"
+              "icon": "dices",
+              "title": "Dice Tray"
             }
           },
           {
@@ -115,8 +115,8 @@
             "state": {
               "type": "exp-calculator-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Плагин больше не активен"
+              "icon": "dice",
+              "title": "Experience Calculator"
             }
           },
           {
@@ -126,7 +126,7 @@
               "type": "initiative-tracker-view",
               "state": {},
               "icon": "lucide-file",
-              "title": "Плагин больше не активен"
+              "title": "Трекер Инициативы и ХП"
             }
           },
           {
@@ -201,19 +201,8 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
-          },
-          {
-            "id": "48ea0d554328902f",
-            "type": "leaf",
-            "state": {
-              "type": "DICE_ROLLER_VIEW",
-              "state": {},
-              "icon": "dices",
-              "title": "Dice Tray"
-            }
           }
-        ],
-        "currentTab": 8
+        ]
       },
       {
         "id": "ae0fd52d4ef4e0d6",
@@ -256,7 +245,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4a45a0a156021b3a",
+  "active": "c351b199a5e40b4a",
   "lastOpenFiles": [
     "DND-Master",
     "DnD-Master-Vault",
