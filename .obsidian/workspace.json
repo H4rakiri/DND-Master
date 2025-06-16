@@ -96,7 +96,7 @@
               "type": "loot-generator-view",
               "state": {},
               "icon": "lucide-file",
-              "title": "Генератор добычи"
+              "title": "Плагин больше не активен"
             }
           },
           {
@@ -105,8 +105,8 @@
             "state": {
               "type": "DICE_ROLLER_VIEW",
               "state": {},
-              "icon": "dices",
-              "title": "Dice Tray"
+              "icon": "lucide-file",
+              "title": "Плагин больше не активен"
             }
           },
           {
@@ -115,8 +115,8 @@
             "state": {
               "type": "exp-calculator-view",
               "state": {},
-              "icon": "dice",
-              "title": "Experience Calculator"
+              "icon": "lucide-file",
+              "title": "Плагин больше не активен"
             }
           },
           {
@@ -126,7 +126,7 @@
               "type": "initiative-tracker-view",
               "state": {},
               "icon": "lucide-file",
-              "title": "Трекер Инициативы и ХП"
+              "title": "Плагин больше не активен"
             }
           },
           {
@@ -201,6 +201,16 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "48ea0d554328902f",
+            "type": "leaf",
+            "state": {
+              "type": "DICE_ROLLER_VIEW",
+              "state": {},
+              "icon": "dices",
+              "title": "Dice Tray"
+            }
           }
         ],
         "currentTab": 8
@@ -237,13 +247,13 @@
       "obsidian-markdown-formatting-assistant-plugin:Open Markdown Formatting Assistant": false,
       "omnisearch:Omnisearch": false,
       "loot-generator:Генератор добычи": false,
-      "obsidian-git:Open Git source control": false,
       "pexels-banner:🚩 Pixel Banner Menu": false,
       "digitalgarden:Digital Garden Publication Center": false,
       "obsidian-leaflet-plugin:Open Leaflet Map": false,
       "exp-calculator:Experience Calculator": false,
       "obsidian-image-add:Image Add": false,
-      "initiative-hp-tracker:Открыть трекер инициативы": false
+      "initiative-hp-tracker:Открыть трекер инициативы": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "4a45a0a156021b3a",
