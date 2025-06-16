@@ -1,0 +1,17 @@
+{
+  "cssTheme": "",
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "preview-default",
+    "dnd-obsidian",
+    "spellcard",
+    "beautiful-dataview",
+    "DnD Style",
+    "new-dnd",
+    "Cards",
+    "npc-portrait",
+    "S - Images Adjustments",
+    "MCL Multi Column"
+  ],
+  "accentColor": ""
+}

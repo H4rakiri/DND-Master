@@ -1,0 +1,23 @@
+{
+  "attachmentFolderPath": "99 - Общие ресурсы/99 - Остальное/Ассеты",
+  "attachmentRenameMode": "All",
+  "customTokensStr": "",
+  "duplicateNameSeparator": " ",
+  "emptyAttachmentFolderBehavior": "DeleteWithEmptyParents",
+  "excludePaths": [],
+  "generatedAttachmentFilename": "${prompt}",
+  "includePaths": [],
+  "jpegQuality": 0.8,
+  "shouldConvertPastedImagesToJpeg": false,
+  "shouldDeleteOrphanAttachments": false,
+  "shouldRenameAttachmentFiles": false,
+  "shouldRenameAttachmentFolder": true,
+  "shouldRenameAttachmentsToLowerCase": false,
+  "shouldRenameCollectedAttachments": false,
+  "specialCharacters": "#^[]|*\\<>:?",
+  "specialCharactersReplacement": "-",
+  "treatAsAttachmentExtensions": [
+    ".excalidraw.md"
+  ],
+  "warningVersion": "7.5.0"
+}

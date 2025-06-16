@@ -1,0 +1,39 @@
+{
+  "lastCalculations": [
+    {
+      "challengeRating": "10",
+      "enemyCount": 1,
+      "playerCount": 3,
+      "result": 1967,
+      "timestamp": 1746624020660
+    },
+    {
+      "challengeRating": "10",
+      "enemyCount": 1,
+      "playerCount": 3,
+      "result": 1967,
+      "timestamp": 1746624017530
+    },
+    {
+      "challengeRating": "5",
+      "enemyCount": 10,
+      "playerCount": 3,
+      "result": 6000,
+      "timestamp": 1746102897466
+    },
+    {
+      "challengeRating": "5",
+      "enemyCount": 10,
+      "playerCount": 3,
+      "result": 6000,
+      "timestamp": 1746102897112
+    },
+    {
+      "challengeRating": "5",
+      "enemyCount": 10,
+      "playerCount": 3,
+      "result": 6000,
+      "timestamp": 1746102896650
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+:root {
+    --card-bg: #1a1a1a;
+    --card-border: #2a2a2a;
+    --primary: #BB86FC;
+    --primary-dark: #9D4EDD;
+    --text-primary: rgba(255, 255, 255, 0.87);
+    --text-secondary: rgba(255, 255, 255, 0.6);
+    --surface-1: #242424;
+    --surface-2: #2d2d2d;
+    --surface-3: #353535;
+}
+
+.spell-container {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: clamp(16px, 4vw, 32px);
+    width: 100%;
+    max-width: 720px;
+    margin: 20px auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, sans-serif;
+    box-sizing: border-box;
+}
+
+.spell-header {
+    text-align: center;
+    margin-bottom: clamp(24px, 5vw, 40px);
+    position: relative;
+}
+
+.spell-header::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(40px, 10vw, 80px);
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+}
+
+.spell-name {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-weight: 300;
+    margin: 0;
+    background: linear-gradient(120deg, var(--primary), var(--primary-dark));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.spell-level {
+    color: var(--text-secondary);
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    margin-top: 8px;
+    font-weight: 400;
+}
+
+.spell-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: clamp(12px, 2vw, 20px);
+    margin: clamp(24px, 5vw, 40px) 0;
+}
+
+.stat-card {
+    background: var(--surface-1);
+    padding: clamp(12px, 3vw, 20px);
+    border-radius: 12px;
+    border: 1px solid var(--surface-2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.5;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    background: var(--surface-2);
+    border-color: var(--surface-3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.stat-label {
+    font-size: clamp(0.65rem, 1.5vw, 0.75rem);
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: var(--primary);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.stat-value {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: var(--text-primary);
+    font-weight: 400;
+    word-wrap: break-word;
+    max-height: 120px;
+    overflow: scroll;
+}
+
+.spell-meta {
+    background: var(--surface-1);
+    border-radius: 12px;
+    padding: clamp(16px, 3vw, 24px);
+    margin: clamp(24px, 4vw, 32px) 0;
+    border: 1px solid var(--surface-2);
+}
+
+.meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    gap: clamp(16px, 3vw, 24px);
+}
+
+.meta-label {
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.meta-value {
+    color: var(--text-primary);
+    font-size: clamp(0.85rem, 1.8vw, 1rem);
+    word-wrap: break-word;
+}
+
+.spell-description {
+    background: var(--surface-1);
+    padding: clamp(20px, 4vw, 28px);
+    border-radius: 12px;
+    border: 1px solid var(--surface-2);
+    line-height: 1.7;
+}
+
+.description-text {
+    color: var(--text-primary);
+    margin-bottom: clamp(20px, 4vw, 28px);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.higher-levels {
+    padding-top: clamp(16px, 3vw, 24px);
+    border-top: 1px solid var(--surface-2);
+}
+
+.higher-levels-title {
+    color: var(--primary);
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    font-weight: 500;
+    margin-bottom: clamp(8px, 2vw, 12px);
+}
+
+.higher-levels-text {
+    color: var(--text-primary);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .spell-container {
+        margin: 16px;
+    }
+    
+    .meta-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Print styles */
+@media print {
+    .spell-container {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .spell-name {
+        color: #000;
+        -webkit-text-fill-color: initial;
+    }
+
+    .stat-card::before {
+        display: none;
+    }
+}
