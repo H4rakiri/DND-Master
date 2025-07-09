@@ -1,7 +1,7 @@
 {
   "frames": [
     {
-      "url": "",
+      "url": "https://dnd.su/class/90-druid/",
       "displayName": "DND-SU-Druid",
       "icon": "",
       "hideOnMobile": true,
@@ -13,7 +13,7 @@
       "customJs": ""
     },
     {
-      "url": "",
+      "url": "https://dnd.su/class/93-monk/",
       "displayName": "DND-SU-Monk",
       "icon": "",
       "hideOnMobile": true,
@@ -25,7 +25,7 @@
       "customJs": ""
     },
     {
-      "url": "",
+      "url": "https://dnd.su/class/88-bard/",
       "displayName": "DND-SU-Bard",
       "icon": "",
       "hideOnMobile": true,
@@ -37,7 +37,7 @@
       "customJs": ""
     },
     {
-      "url": "",
+      "url": "https://dnd.su/class/105-wizard/",
       "displayName": "DND-SU-Wizard",
       "icon": "",
       "hideOnMobile": true,
@@ -49,7 +49,7 @@
       "customJs": ""
     },
     {
-      "url": "",
+      "url": "https://dnd.su/class/87-barbarian/",
       "displayName": "DND-SU-Barbarian",
       "icon": "",
       "hideOnMobile": true,
@@ -61,7 +61,7 @@
       "customJs": ""
     },
     {
-      "url": "",
+      "url": "https://dnd.su/class/91-fighter/",
       "displayName": "DND-SU-Fighter",
       "icon": "",
       "hideOnMobile": true,
@@ -73,7 +73,7 @@
       "customJs": ""
     },
     {
-      "url": "",
+      "url": "https://dnd.su/class/89-cleric/",
       "displayName": "DND-SU-Cleric",
       "icon": "",
       "hideOnMobile": true,
@@ -85,7 +85,7 @@
       "customJs": ""
     },
     {
-      "url": "",
+      "url": "https://dnd.su/class/137-artificer/",
       "displayName": "DND-SU-Artificer",
       "icon": "",
       "hideOnMobile": true,
@@ -97,7 +97,7 @@
       "customJs": ""
     },
     {
-      "url": "",
+      "url": "https://dnd.su/class/104-warlock/",
       "displayName": "DND-SU-Warlock",
       "icon": "",
       "hideOnMobile": true,
@@ -109,7 +109,7 @@
       "customJs": ""
     },
     {
-      "url": "",
+      "url": "https://dnd.su/class/94-paladin/",
       "displayName": "DND-SU-Paladin",
       "icon": "",
       "hideOnMobile": true,
@@ -121,7 +121,7 @@
       "customJs": ""
     },
     {
-      "url": "",
+      "url": "https://dnd.su/class/99-rogue/",
       "displayName": "DND-SU-Rogue",
       "icon": "",
       "hideOnMobile": true,
@@ -133,7 +133,7 @@
       "customJs": ""
     },
     {
-      "url": "",
+      "url": "https://dnd.su/class/97-ranger/",
       "displayName": "DND-SU-Ranger",
       "icon": "",
       "hideOnMobile": true,
@@ -145,7 +145,7 @@
       "customJs": ""
     },
     {
-      "url": "",
+      "url": "https://dnd.su/class/101-sorcerer/",
       "displayName": "DND-SU-Sorcerer",
       "icon": "",
       "hideOnMobile": true,
