@@ -35,8 +35,7 @@
               "title": "03 - Эпизод 3"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -93,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 279.5
+    "width": 200
   },
   "right": {
     "id": "c4de976d07796e3f",
@@ -217,7 +216,8 @@
               "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       },
       {
         "id": "ae0fd52d4ef4e0d6",
@@ -238,7 +238,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 320.5
+    "width": 320.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -260,7 +261,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4a45a0a156021b3a",
+  "active": "687b658448c5177e",
   "lastOpenFiles": [
     "01 - Кампейны/Легенда об Аэроталисе/01 - Сюжет/03 - Эпизод 3/03 - Эпизод 3.md",
     "Монах.md",
