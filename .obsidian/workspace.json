@@ -142,6 +142,69 @@
               "icon": "lucide-file",
               "title": "Трекер Инициативы и ХП"
             }
+          },
+          {
+            "id": "d765139a935360c6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "02 - Ваншоты/Зов Грифона/01 - Сюжет/Акт 1.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Обратные ссылки для Акт 1"
+            }
+          },
+          {
+            "id": "602cadf969acaeaf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "02 - Ваншоты/Зов Грифона/01 - Сюжет/Акт 1.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Исходящие ссылки из Акт 1"
+            }
+          },
+          {
+            "id": "0d3f960b93b1dba7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Теги"
+            }
+          },
+          {
+            "id": "f163d2f3fed41beb",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "02 - Ваншоты/Зов Грифона/01 - Сюжет/Акт 1.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Структура Акт 1"
+            }
           }
         ],
         "currentTab": 3
