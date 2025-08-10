@@ -1,5 +1,8 @@
 {
   "fancy-a-story@@theme-variant-dark": "fas-atom",
   "fancy-a-story@@custom-color-base-00@@dark": "#000000",
-  "fancy-a-story@@custom-color-base-100@@dark": "#9B67BA"
+  "fancy-a-story@@custom-color-base-100@@dark": "#9B67BA",
+  "fancy-a-story@@ribbon-position": "fas-ribbon-horizontal-floating-hover",
+  "fancy-a-story@@fas-callout-infobox": true,
+  "fancy-a-story@@fas-skin-select": "none"
 }
