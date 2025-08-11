@@ -13,5 +13,6 @@
   "fancy-a-story@@fas-bg-textures": true,
   "fancy-a-story@@fas-accessibility": false,
   "fancy-a-story@@fas-sans-serif": false,
-  "fancy-a-story@@fas-bigger-font": true
+  "fancy-a-story@@fas-bigger-font": false,
+  "fancy-a-story@@crop-root-corners": "enable"
 }
