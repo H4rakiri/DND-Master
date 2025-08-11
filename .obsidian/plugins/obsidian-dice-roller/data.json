@@ -90,6 +90,13 @@
       "resultText": "6d20\n[17, 20, 19, 18, 14, 15]",
       "timestamp": 1746624693458,
       "id": "wS6Cu8xQXyOi"
+    },
+    {
+      "result": "22",
+      "original": "2d20",
+      "resultText": "2d20\n[7, 15]",
+      "timestamp": 1754901164399,
+      "id": "INKlU1xIKlXq"
     }
   ]
 }

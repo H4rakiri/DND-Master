@@ -4,5 +4,9 @@
   "fancy-a-story@@custom-color-base-100@@dark": "#9B67BA",
   "fancy-a-story@@ribbon-position": "fas-ribbon-horizontal-floating-hover",
   "fancy-a-story@@fas-callout-infobox": true,
-  "fancy-a-story@@fas-skin-select": "none"
+  "fancy-a-story@@fas-skin-select": "none",
+  "fancy-a-story@@fas-vault-menu-top": false,
+  "fancy-a-story@@fas-bookmark-tabs": "flat",
+  "fancy-a-story@@fas-sidebar-texture-custom": false,
+  "fancy-a-story@@fas-compact": false
 }
