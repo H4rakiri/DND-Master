@@ -129,8 +129,7 @@
               "title": "Трекер Инициативы и ХП"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "51e099cb588c24c7",
@@ -173,7 +172,7 @@
       "obsidian-git:Open Git source control": true
     }
   },
-  "active": "5eea49ad312024ee",
+  "active": "c351b199a5e40b4a",
   "lastOpenFiles": [
     "02 - Ваншоты/Зов Грифона/01 - Сюжет/Сюжет Кратко.md",
     "02 - Ваншоты/Зов Грифона/02 - NPC/Старая Мари.md",

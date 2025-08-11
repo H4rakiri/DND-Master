@@ -8,5 +8,10 @@
   "fancy-a-story@@fas-vault-menu-top": false,
   "fancy-a-story@@fas-bookmark-tabs": "flat",
   "fancy-a-story@@fas-sidebar-texture-custom": false,
-  "fancy-a-story@@fas-compact": false
+  "fancy-a-story@@fas-compact": false,
+  "fancy-a-story@@pen-highlighter-effect": "disable",
+  "fancy-a-story@@fas-bg-textures": true,
+  "fancy-a-story@@fas-accessibility": false,
+  "fancy-a-story@@fas-sans-serif": false,
+  "fancy-a-story@@fas-bigger-font": true
 }
