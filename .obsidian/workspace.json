@@ -128,6 +128,69 @@
               "icon": "lucide-file",
               "title": "Трекер Инициативы и ХП"
             }
+          },
+          {
+            "id": "f409b28e664404ef",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "02 - Ваншоты/Зов Грифона/01 - Сюжет/Акт 1.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Обратные ссылки для Акт 1"
+            }
+          },
+          {
+            "id": "38d8964eb78ae970",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "02 - Ваншоты/Зов Грифона/01 - Сюжет/Акт 1.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Исходящие ссылки из Акт 1"
+            }
+          },
+          {
+            "id": "b037bd09f0e42080",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Теги"
+            }
+          },
+          {
+            "id": "08c4cccea4b16590",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "02 - Ваншоты/Зов Грифона/01 - Сюжет/Акт 1.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Структура Акт 1"
+            }
           }
         ]
       },
@@ -175,8 +238,10 @@
   "active": "5eea49ad312024ee",
   "lastOpenFiles": [
     "99 - Общие ресурсы/99 - Остальное/Ассеты/Элвуд.png",
-    "02 - Ваншоты/Зов Грифона/02 - NPC/Элвуд.md",
     "02 - Ваншоты/Зов Грифона/01 - Сюжет/Акт 1.md",
+    "99 - Общие ресурсы/99 - Остальное/Ассеты/Старая Мари.png",
+    "99 - Общие ресурсы/99 - Остальное/Ассеты/Старая Мари 1.png",
+    "02 - Ваншоты/Зов Грифона/02 - NPC/Элвуд.md",
     "99 - Общие ресурсы/99 - Остальное/Ассеты/Горм анн'Тейн.png",
     "02 - Ваншоты/Зов Грифона/01 - Сюжет/Сюжет Кратко.md",
     "02 - Ваншоты/Зов Грифона/02 - NPC/Старая Мари.md",
@@ -184,7 +249,6 @@
     "02 - Ваншоты/Зов Грифона/02 - NPC/Горм анн’Тейн.md",
     "02 - Ваншоты/Зов Грифона/02 - NPC/Борис \"Бочка\".md",
     "План.md",
-    "99 - Общие ресурсы/99 - Остальное/Ассеты/Старая Мари.png",
     "02 - Ваншоты/Зов Грифона/03 - Локации/Деревня у Озера.md",
     "02 - Ваншоты/Зов Грифона/03 - Локации/Загородный Дом Горма анн’Тейна (У Озера Теней).md",
     "99 - Общие ресурсы/01 - Бестиарий/Существа/Грифон.md",
@@ -211,8 +275,6 @@
     "01 - Кампейны/Легенда об Аэроталисе/assets/03 - Эпизод 3/small-oasis.png",
     "01 - Кампейны/Легенда об Аэроталисе/assets/03 - Эпизод 3/thief-seller.png",
     "01 - Кампейны/Легенда об Аэроталисе/assets/03 - Эпизод 3/lich-seller.png",
-    "01 - Кампейны/Легенда об Аэроталисе/assets/03 - Эпизод 3/elf-seller.png",
-    "01 - Кампейны/Легенда об Аэроталисе/assets/03 - Эпизод 3/a_full_body_concept_sketch_of_a_blacksmith_dwarf_with_metal_rings_in_his_beard__scars_on_face__chainmail-f49f2ebc-e929-4d87-a073-f0ef91bfc2f2.png",
     "01 - Кампейны/Легенда об Аэроталисе/01 - Сюжет/03 - Эпизод 3/99 - Магазины",
     "01 - Кампейны/Легенда об Аэроталисе/01 - Сюжет/02 - Переполох в Риатавине",
     "01 - Кампейны/Легенда об Аэроталисе/01 - Сюжет/01 - В Велене",
