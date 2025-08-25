@@ -7,4 +7,9 @@ views:
     order:
       - file.name
       - hitpoints
+      - armorClass
+      - cr
     image: note.banner
+    cardSize: 140
+    imageAspectRatio: 1.6
+    imageFit: ""
