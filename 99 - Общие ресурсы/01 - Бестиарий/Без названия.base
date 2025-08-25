@@ -1,0 +1,10 @@
+views:
+  - type: cards
+    name: Карточки
+    filters:
+      and:
+        - file.inFolder("99 - Общие ресурсы/01 - Бестиарий")
+    order:
+      - file.name
+      - hitpoints
+    image: note.banner
