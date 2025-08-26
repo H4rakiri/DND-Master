@@ -10,6 +10,6 @@ views:
       - armorClass
       - cr
     image: note.banner
-    cardSize: 140
-    imageAspectRatio: 1.6
+    cardSize: 160
+    imageAspectRatio: 1.5
     imageFit: ""
