@@ -12,4 +12,4 @@ views:
     image: note.banner
     cardSize: 160
     imageAspectRatio: 1.5
-    imageFit: ""
+    imageFit: contain
