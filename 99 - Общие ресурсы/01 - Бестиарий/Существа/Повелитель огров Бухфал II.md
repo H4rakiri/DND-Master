@@ -13,8 +13,7 @@ tags:
 title: Повелитель огров Бухфал II
 type: Великан
 cr: '2'
-cssclasses:
-    - dnd
+banner:
 ---
 
 

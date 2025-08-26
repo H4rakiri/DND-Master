@@ -13,8 +13,7 @@ tags:
 title: Ифан Талро’a
 type: Гуманоид (человек чультец)
 cr: '0.125'
-cssclasses:
-    - dnd
+banner:
 ---
 
 

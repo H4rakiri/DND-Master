@@ -12,8 +12,7 @@ tags:
 title: Сапфировый cтраж
 type: Конструкт
 cr: '10'
-cssclasses:
-    - dnd
+banner:
 ---
 
 

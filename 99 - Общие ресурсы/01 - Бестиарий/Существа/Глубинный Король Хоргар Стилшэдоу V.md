@@ -13,8 +13,7 @@ tags:
 title: Глубинный Король Хоргар Стилшэдоу V
 type: Гуманоид (дварф)
 cr: '3'
-cssclasses:
-    - dnd
+banner:
 ---
 
 

@@ -13,8 +13,7 @@ tags:
 title: Пидлуик II
 type: Конструкт
 cr: '0.25'
-cssclasses:
-    - dnd
+banner:
 ---
 
 
