@@ -1,19 +1,19 @@
 {
-  "obsidian-git:push": [
-    {
-      "modifiers": [
-        "Ctrl",
-        "Mod"
-      ],
-      "key": "="
-    }
-  ],
   "omnisearch:show-modal": [
     {
       "modifiers": [
         "Alt"
       ],
       "key": " "
+    }
+  ],
+  "obsidian-git:push": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "="
     }
   ]
 }
