@@ -1,7 +1,7 @@
-/* D&D Homebrewery Style для Obsidian */
+/* D&D Homebrewery Style для Obsidian - ИСПРАВЛЕННАЯ ВЕРСИЯ */
 /* Использование: добавь cssclasses: dnd-style в frontmatter заметки */
 
-/* === Импорт шрифтов D&D (Solbera Fonts) === */
+/* === Импорт шрифтов D&D === */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
@@ -20,45 +20,51 @@
   --dnd-hr: #9C2B1B;
 }
 
-/* === Основной контейнер (Reading & Editing mode) === */
+/* === Основной контейнер === */
 .dnd-style.markdown-source-view.mod-cm6 .cm-scroller,
 .dnd-style.markdown-preview-view {
-  background-color: var(--dnd-bg);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23d4c9a8' fill-opacity='0.15'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-color: var(--dnd-bg) !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23d4c9a8' fill-opacity='0.15'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   padding: 40px 50px !important;
-  font-family: 'Libre Baskerville', 'Bookinsanity', Georgia, serif !important;
+  font-family: 'Libre Baskerville', Georgia, serif !important;
   font-size: 14px;
-  line-height: 1.3;
-  color: var(--dnd-text);
+  line-height: 1.4;
+  color: var(--dnd-text) !important;
+}
+
+/* === КОЛОНКИ - ТОЛЬКО ДЛЯ PREVIEW MODE === */
+.dnd-style.markdown-preview-view .markdown-preview-sizer {
   column-count: 2;
   column-gap: 40px;
   column-rule: 1px solid rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-/* === Без колонок (опционально) === */
-.dnd-style.dnd-single-column.markdown-source-view.mod-cm6 .cm-scroller,
-.dnd-style.dnd-single-column.markdown-preview-view {
-  column-count: 1;
+/* Без колонок в режиме редактирования */
+.dnd-style.markdown-source-view.mod-cm6 .cm-scroller {
+  column-count: unset !important;
+}
+
+/* === Одноколоночный режим === */
+.dnd-style.dnd-single-column .markdown-preview-sizer {
+  column-count: 1 !important;
 }
 
 /* === Заголовки === */
-.dnd-style.markdown-source-view.mod-cm6 .cm-header,
-.dnd-style.markdown-preview-view h1,
-.dnd-style.markdown-preview-view h2,
-.dnd-style.markdown-preview-view h3,
-.dnd-style.markdown-preview-view h4,
-.dnd-style.markdown-preview-view h5 {
-  font-family: 'Cinzel', 'Mr Eaves Small Caps', 'Palatino Linotype', serif !important;
-  color: var(--dnd-heading);
+.dnd-style h1, .dnd-style h2, .dnd-style h3, .dnd-style h4, .dnd-style h5,
+.dnd-style .cm-header {
+  font-family: 'Cinzel', 'Palatino Linotype', serif !important;
+  color: var(--dnd-heading) !important;
   font-weight: 700;
   margin-bottom: 0.2em;
   break-after: avoid;
 }
 
-/* H1 - Заголовок главы */
-.dnd-style.markdown-source-view.mod-cm6 .cm-header-1,
-.dnd-style.markdown-preview-view h1 {
-  font-family: 'Cinzel Decorative', 'Nodesto Caps Condensed', serif !important;
+/* H1 */
+.dnd-style h1,
+.dnd-style .cm-header-1 {
+  font-family: 'Cinzel Decorative', serif !important;
   font-size: 2.2em;
   border-bottom: 2px solid var(--dnd-heading);
   padding-bottom: 5px;
@@ -68,280 +74,232 @@
   letter-spacing: 2px;
 }
 
-/* H2 - Заголовок раздела */
-.dnd-style.markdown-source-view.mod-cm6 .cm-header-2,
-.dnd-style.markdown-preview-view h2 {
+/* H2 */
+.dnd-style h2,
+.dnd-style .cm-header-2 {
   font-size: 1.6em;
   border-bottom: 2px solid var(--dnd-hr);
   margin-top: 1em;
 }
 
 /* H3 */
-.dnd-style.markdown-source-view.mod-cm6 .cm-header-3,
-.dnd-style.markdown-preview-view h3 {
+.dnd-style h3,
+.dnd-style .cm-header-3 {
   font-size: 1.3em;
   border-bottom: 1px solid var(--dnd-accent);
 }
 
 /* H4 */
-.dnd-style.markdown-source-view.mod-cm6 .cm-header-4,
-.dnd-style.markdown-preview-view h4 {
+.dnd-style h4,
+.dnd-style .cm-header-4 {
   font-size: 1.1em;
   font-style: italic;
-  border-bottom: none;
-}
-
-/* H5 */
-.dnd-style.markdown-source-view.mod-cm6 .cm-header-5,
-.dnd-style.markdown-preview-view h5 {
-  font-size: 1em;
-  font-variant: small-caps;
 }
 
 /* === Параграфы === */
-.dnd-style.markdown-preview-view p {
+.dnd-style p {
   text-align: justify;
   text-indent: 1em;
   margin: 0 0 0.5em 0;
+  color: var(--dnd-text) !important;
 }
-
-.dnd-style.markdown-preview-view p:first-of-type {
-  text-indent: 0;
-}
-
-
 
 /* === Горизонтальная линия === */
-.dnd-style.markdown-preview-view hr,
-.dnd-style.markdown-source-view.mod-cm6 hr {
+.dnd-style hr {
   border: none;
   height: 5px;
-  background: linear-gradient(to right, 
-    transparent, 
-    var(--dnd-hr), 
-    var(--dnd-hr), 
-    transparent
-  );
+  background: linear-gradient(to right, transparent, var(--dnd-hr), var(--dnd-hr), transparent);
   margin: 15px 0;
 }
 
-/* === Цитаты / Note блоки === */
-.dnd-style.markdown-preview-view blockquote,
-.dnd-style.markdown-source-view.mod-cm6 .HyperMD-quote {
-  background-color: var(--dnd-blockquote-bg);
-  border-left: 4px solid var(--dnd-blockquote-border);
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 10px 15px;
+/* === Цитаты / Blockquotes === */
+.dnd-style blockquote {
+  background-color: #F8F4E8 !important;
+  border-left: 4px solid var(--dnd-accent) !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 12px 16px !important;
   margin: 15px 0;
   font-style: italic;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  color: #2C2C2A !important;
 }
 
-.dnd-style.markdown-preview-view blockquote p {
+.dnd-style blockquote p {
   text-indent: 0;
   margin: 0.3em 0;
+  color: #2C2C2A !important;
 }
 
 /* === Таблицы === */
-.dnd-style.markdown-preview-view table,
-.dnd-style.markdown-source-view.mod-cm6 table {
+.dnd-style table {
   width: 100%;
   border-collapse: collapse;
   margin: 15px 0;
   font-size: 0.9em;
 }
 
-.dnd-style.markdown-preview-view thead,
-.dnd-style.markdown-source-view.mod-cm6 thead {
+.dnd-style thead {
   background-color: var(--dnd-table-header);
   border-bottom: 2px solid var(--dnd-heading);
 }
 
-.dnd-style.markdown-preview-view th,
-.dnd-style.markdown-source-view.mod-cm6 th {
+.dnd-style th {
   font-family: 'Cinzel', serif;
   font-weight: 700;
-  color: var(--dnd-heading);
+  color: var(--dnd-heading) !important;
   padding: 8px 10px;
   text-align: left;
 }
 
-.dnd-style.markdown-preview-view td,
-.dnd-style.markdown-source-view.mod-cm6 td {
+.dnd-style td {
   padding: 6px 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--dnd-text) !important;
 }
 
-.dnd-style.markdown-preview-view tr:nth-child(odd),
-.dnd-style.markdown-source-view.mod-cm6 tr:nth-child(odd) {
+.dnd-style tr:nth-child(odd) {
   background-color: var(--dnd-table-row-odd);
 }
 
 /* === Списки === */
-.dnd-style.markdown-preview-view ul,
-.dnd-style.markdown-preview-view ol {
+.dnd-style ul, .dnd-style ol {
   padding-left: 1.5em;
   margin: 0.5em 0;
+  color: var(--dnd-text) !important;
 }
 
-.dnd-style.markdown-preview-view li {
+.dnd-style li {
   margin-bottom: 0.3em;
+  color: var(--dnd-text) !important;
 }
 
 /* === Жирный текст === */
-.dnd-style.markdown-preview-view strong,
-.dnd-style.markdown-source-view.mod-cm6 .cm-strong {
-  color: var(--dnd-heading);
+.dnd-style strong,
+.dnd-style .cm-strong {
+  color: var(--dnd-heading) !important;
   font-weight: 700;
 }
 
 /* === Курсив === */
-.dnd-style.markdown-preview-view em,
-.dnd-style.markdown-source-view.mod-cm6 .cm-em {
-  color: var(--dnd-text);
-}
-
-/* === Код (для заклинаний и механик) === */
-.dnd-style.markdown-preview-view code,
-.dnd-style.markdown-source-view.mod-cm6 .cm-inline-code {
-  background-color: rgba(201, 173, 106, 0.2);
-  padding: 2px 6px;
-  border-radius: 3px;
-  font-family: 'Courier New', monospace;
-  font-size: 0.9em;
-  color: var(--dnd-heading);
-}
-
-/* === Блоки кода === */
-.dnd-style.markdown-preview-view pre,
-.dnd-style.markdown-source-view.mod-cm6 .HyperMD-codeblock {
-  background-color: var(--dnd-bg-dark);
-  border: 1px solid var(--dnd-accent);
-  padding: 15px;
-  overflow-x: auto;
+.dnd-style em,
+.dnd-style .cm-em {
+  color: var(--dnd-text) !important;
 }
 
 /* === Ссылки === */
-.dnd-style.markdown-preview-view a,
-.dnd-style.markdown-source-view.mod-cm6 .cm-link,
-.dnd-style.markdown-source-view.mod-cm6 .cm-hmd-internal-link {
-  color: var(--dnd-heading);
+.dnd-style a {
+  color: var(--dnd-heading) !important;
   text-decoration: underline;
   text-decoration-color: var(--dnd-accent);
 }
 
-.dnd-style.markdown-preview-view a:hover {
-  color: var(--dnd-hr);
-}
-
-/* === Изображения === */
-.dnd-style.markdown-preview-view img {
-  border: 3px solid var(--dnd-accent);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  margin: 10px auto;
-  display: block;
-}
-
-/* === Callouts (для блоков характеристик) === */
+/* === CALLOUTS - ИСПРАВЛЕННЫЕ === */
 .dnd-style .callout {
-  background: linear-gradient(to bottom, #FDF1DC, #F9E7C7);
-  border: 2px solid var(--dnd-accent);
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-  padding: 15px;
+  background: linear-gradient(135deg, #FDF1DC 0%, #F5E6C8 100%) !important;
+  border: 2px solid #C9AD6A !important;
+  border-radius: 0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 0 !important;
   margin: 15px 0;
+  color: #1D1D1B !important;
 }
 
 .dnd-style .callout-title {
-  font-family: 'Cinzel', serif;
-  color: var(--dnd-heading);
-  font-weight: 700;
+  font-family: 'Cinzel', serif !important;
+  color: #58180D !important;
+  font-weight: 700 !important;
   font-size: 1.2em;
-  border-bottom: 2px solid var(--dnd-hr);
-  padding-bottom: 5px;
-  margin-bottom: 10px;
+  border-bottom: 2px solid #9C2B1B !important;
+  padding: 10px 15px !important;
+  margin: 0 !important;
+  background: transparent !important;
 }
 
-/* === Stat Block стиль (используй callout[statblock]) === */
+.dnd-style .callout-title-inner {
+  color: #58180D !important;
+  font-weight: 700 !important;
+}
+
+.dnd-style .callout-icon {
+  color: #58180D !important;
+}
+
+.dnd-style .callout-content {
+  padding: 10px 15px !important;
+  color: #1D1D1B !important;
+}
+
+.dnd-style .callout-content p,
+.dnd-style .callout-content li,
+.dnd-style .callout-content span {
+  color: #1D1D1B !important;
+}
+
+/* === STATBLOCK - ПОЛНОСТЬЮ ПЕРЕРАБОТАННЫЙ === */
 .dnd-style .callout[data-callout="statblock"] {
-  background: linear-gradient(to bottom, #FDF1DC 0%, #F8E4B8 50%, #F0DAA5 100%);
-  border-image: linear-gradient(to bottom, #9C2B1B, #58180D) 1;
-  border-width: 5px 0;
-  border-style: solid;
+  background: linear-gradient(to bottom, #FDF1DC 0%, #F8E4B8 50%, #F0DAA5 100%) !important;
+  border: none !important;
+  border-top: 5px solid #58180D !important;
+  border-bottom: 5px solid #58180D !important;
   box-shadow: 
-    inset 0 0 20px rgba(0, 0, 0, 0.1),
-    0 2px 6px rgba(0, 0, 0, 0.2);
+    inset 0 0 20px rgba(0, 0, 0, 0.08),
+    0 2px 6px rgba(0, 0, 0, 0.2) !important;
 }
 
 .dnd-style .callout[data-callout="statblock"] .callout-title {
-  font-size: 1.8em;
-  color: var(--dnd-heading);
+  font-size: 1.6em !important;
+  color: #58180D !important;
   letter-spacing: 1px;
+  border-bottom: 2px solid #58180D !important;
+  padding: 12px 15px !important;
 }
 
-/* === Monster/NPC описание === */
-.dnd-style .callout[data-callout="monster"],
-.dnd-style .callout[data-callout="npc"] {
-  background: #F2E5D5;
-  border-top: 3px solid var(--dnd-hr);
-  border-bottom: 3px solid var(--dnd-hr);
-  border-left: none;
-  border-right: none;
+.dnd-style .callout[data-callout="statblock"] .callout-title-inner {
+  color: #58180D !important;
+}
+
+.dnd-style .callout[data-callout="statblock"] .callout-content {
+  color: #1D1D1B !important;
+  padding: 12px 15px !important;
+}
+
+.dnd-style .callout[data-callout="statblock"] .callout-content p,
+.dnd-style .callout[data-callout="statblock"] .callout-content li,
+.dnd-style .callout[data-callout="statblock"] .callout-content strong,
+.dnd-style .callout[data-callout="statblock"] .callout-content em {
+  color: #1D1D1B !important;
+}
+
+.dnd-style .callout[data-callout="statblock"] .callout-content strong {
+  color: #58180D !important;
 }
 
 /* === Read-aloud текст === */
 .dnd-style .callout[data-callout="read"],
 .dnd-style .callout[data-callout="readaloud"] {
-  background: #E9ECEF;
-  border-left: 4px solid #58180D;
+  background: #E9ECEF !important;
+  border-left: 4px solid #58180D !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-right: none !important;
   font-style: italic;
-  padding: 15px 20px;
 }
 
-/* === Тени на краях страницы (эффект пергамента) === */
-.dnd-style.markdown-preview-view::before,
-.dnd-style.markdown-source-view.mod-cm6 .cm-scroller::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.15);
+.dnd-style .callout[data-callout="read"] .callout-content,
+.dnd-style .callout[data-callout="readaloud"] .callout-content {
+  color: #2C2C2A !important;
 }
 
-/* === Скроллбар === */
-.dnd-style::-webkit-scrollbar {
-  width: 10px;
-}
-
-.dnd-style::-webkit-scrollbar-track {
-  background: var(--dnd-bg-dark);
-}
-
-.dnd-style::-webkit-scrollbar-thumb {
-  background: var(--dnd-accent);
-  border-radius: 5px;
-}
-
-.dnd-style::-webkit-scrollbar-thumb:hover {
-  background: var(--dnd-heading);
-}
-
-/* === Режим редактирования - дополнительные стили === */
+/* === Режим редактирования === */
 .dnd-style.markdown-source-view.mod-cm6 .cm-line {
   font-family: 'Libre Baskerville', Georgia, serif !important;
-  color: var(--dnd-text);
+  color: var(--dnd-text) !important;
 }
 
 .dnd-style.markdown-source-view.mod-cm6 .cm-content {
-  padding: 20px 0;
-}
-
-/* === Исправление отступов в режиме редактирования === */
-.dnd-style.markdown-source-view.mod-cm6 .cm-contentContainer {
-  padding: 0 20px;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* === Выделение текста === */
@@ -349,7 +307,18 @@
   background: rgba(201, 173, 106, 0.4);
 }
 
-/* === Метаданные (frontmatter) - скрыть в превью === */
-.dnd-style.markdown-preview-view .frontmatter-container {
+/* === Скрыть frontmatter в превью === */
+.dnd-style .frontmatter-container {
   display: none;
+}
+
+/* === Убрать горизонтальную прокрутку === */
+.dnd-style .markdown-preview-view,
+.dnd-style .markdown-source-view {
+  overflow-x: hidden !important;
+}
+
+.dnd-style .markdown-preview-sizer {
+  width: 100% !important;
+  max-width: 100% !important;
 }
