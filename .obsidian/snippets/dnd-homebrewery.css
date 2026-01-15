@@ -1,229 +1,264 @@
-/* D&D Homebrewery Style — ИСПРАВЛЕННЫЕ ЦВЕТА */
+/* D&D Homebrewery Style для Obsidian */
 /* cssclasses: dnd-style */
+/* ПОЛНАЯ ВЕРСИЯ С ИСПРАВЛЕННЫМИ ЦВЕТАМИ */
 
+/* === Импорт шрифтов === */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
 
-/* === ПРИНУДИТЕЛЬНЫЕ ЦВЕТА ДЛЯ ВСЕГО === */
-.dnd-style,
-.dnd-style *,
-.dnd-style *::before,
-.dnd-style *::after {
-  --text-normal: #1D1D1B !important;
-  --text-muted: #3D3D3B !important;
-  --text-faint: #5D5D5B !important;
+/* ============================================ */
+/* ===== ГЛОБАЛЬНЫЙ СБРОС ЦВЕТОВ ===== */
+/* ============================================ */
+
+body .dnd-style,
+body .dnd-style *:not(svg):not(path) {
+  color: #1D1D1B !important;
 }
 
-/* === ОСНОВНОЙ КОНТЕЙНЕР === */
-.dnd-style.markdown-preview-view,
-.dnd-style.markdown-source-view.mod-cm6 .cm-scroller {
+/* ============================================ */
+/* ===== ОСНОВНОЙ КОНТЕЙНЕР ===== */
+/* ============================================ */
+
+body .dnd-style.markdown-preview-view,
+body .dnd-style.markdown-reading-view {
   background-color: #EEE5CE !important;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23d4c9a8' fill-opacity='0.12'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23d4c9a8' fill-opacity='0.12'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important;
   padding: 40px 60px !important;
   font-family: 'Libre Baskerville', Georgia, serif !important;
-  font-size: 15px;
-  line-height: 1.5;
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+}
+
+body .dnd-style.markdown-preview-view .markdown-preview-sizer,
+body .dnd-style.markdown-reading-view .markdown-preview-sizer {
+  max-width: 750px !important;
+  margin: 0 auto !important;
+}
+
+/* Режим редактирования */
+body .dnd-style.markdown-source-view.mod-cm6 .cm-scroller {
+  background-color: #EEE5CE !important;
+  padding: 40px 60px !important;
+  font-family: 'Libre Baskerville', Georgia, serif !important;
+}
+
+body .dnd-style.markdown-source-view.mod-cm6 .cm-content {
+  max-width: 750px !important;
+  margin: 0 auto !important;
+}
+
+body .dnd-style.markdown-source-view.mod-cm6 .cm-line {
   color: #1D1D1B !important;
 }
 
-.dnd-style.markdown-preview-view .markdown-preview-sizer {
-  max-width: 750px;
-  margin: 0 auto;
-}
+/* ============================================ */
+/* ===== ЗАГОЛОВКИ ===== */
+/* ============================================ */
 
-.dnd-style.markdown-source-view.mod-cm6 .cm-content {
-  max-width: 750px;
-  margin: 0 auto;
-}
-
-/* === ВСЕ ТЕКСТОВЫЕ ЭЛЕМЕНТЫ — ПРИНУДИТЕЛЬНЫЙ ЦВЕТ === */
-.dnd-style.markdown-preview-view,
-.dnd-style.markdown-preview-view p,
-.dnd-style.markdown-preview-view span,
-.dnd-style.markdown-preview-view li,
-.dnd-style.markdown-preview-view td,
-.dnd-style.markdown-preview-view th,
-.dnd-style.markdown-preview-view div,
-.dnd-style.markdown-preview-view label,
-.dnd-style.markdown-source-view.mod-cm6 .cm-line {
-  color: #1D1D1B !important;
-}
-
-/* === ЗАГОЛОВКИ === */
-.dnd-style.markdown-preview-view h1,
-.dnd-style.markdown-preview-view h2,
-.dnd-style.markdown-preview-view h3,
-.dnd-style.markdown-preview-view h4,
-.dnd-style.markdown-preview-view h5,
-.dnd-style.markdown-preview-view h6,
-.dnd-style.markdown-source-view .cm-header {
+body .dnd-style h1,
+body .dnd-style h2,
+body .dnd-style h3,
+body .dnd-style h4,
+body .dnd-style h5,
+body .dnd-style h6,
+body .dnd-style .HyperMD-header {
   font-family: 'Cinzel', 'Palatino Linotype', serif !important;
   color: #58180D !important;
   font-weight: 700 !important;
-  margin-bottom: 0.3em;
 }
 
-.dnd-style.markdown-preview-view h1,
-.dnd-style.markdown-source-view .cm-header-1 {
+body .dnd-style h1 {
   font-family: 'Cinzel Decorative', serif !important;
   font-size: 2.4em !important;
   border-bottom: 3px solid #58180D !important;
-  padding-bottom: 8px;
-  margin-top: 0.3em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  padding-bottom: 8px !important;
+  margin-top: 0.3em !important;
+  margin-bottom: 0.5em !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
   color: #58180D !important;
 }
 
-.dnd-style.markdown-preview-view h2,
-.dnd-style.markdown-source-view .cm-header-2 {
+body .dnd-style h2 {
   font-size: 1.8em !important;
   border-bottom: 2px solid #9C2B1B !important;
-  padding-bottom: 4px;
-  margin-top: 1.2em;
+  padding-bottom: 4px !important;
+  margin-top: 1.2em !important;
   color: #58180D !important;
 }
 
-.dnd-style.markdown-preview-view h3,
-.dnd-style.markdown-source-view .cm-header-3 {
+body .dnd-style h3 {
   font-size: 1.4em !important;
   border-bottom: 1px solid #C9AD6A !important;
-  margin-top: 1em;
+  margin-top: 1em !important;
   color: #58180D !important;
 }
 
-.dnd-style.markdown-preview-view h4,
-.dnd-style.markdown-source-view .cm-header-4 {
+body .dnd-style h4 {
   font-size: 1.2em !important;
-  font-style: italic;
+  font-style: italic !important;
   color: #58180D !important;
 }
 
-/* === ПАРАГРАФЫ === */
-.dnd-style.markdown-preview-view p {
-  text-align: justify;
-  text-indent: 1.2em;
-  margin: 0 0 0.6em 0;
+/* ============================================ */
+/* ===== ПАРАГРАФЫ И ТЕКСТ ===== */
+/* ============================================ */
+
+body .dnd-style p {
+  text-align: justify !important;
+  text-indent: 1.2em !important;
+  margin: 0 0 0.6em 0 !important;
   color: #1D1D1B !important;
 }
 
-.dnd-style.markdown-preview-view h1 + p,
-.dnd-style.markdown-preview-view h2 + p,
-.dnd-style.markdown-preview-view h3 + p {
-  text-indent: 0;
+body .dnd-style h1 + p,
+body .dnd-style h2 + p,
+body .dnd-style h3 + p {
+  text-indent: 0 !important;
 }
 
-/* === БУКВИЦА === */
-.dnd-style.markdown-preview-view h1 + p::first-letter {
-  font-family: 'Cinzel Decorative', serif;
-  float: left;
-  font-size: 3.5em;
-  line-height: 0.8;
-  padding-right: 8px;
-  padding-top: 4px;
+/* Буквица */
+body .dnd-style h1 + p::first-letter {
+  font-family: 'Cinzel Decorative', serif !important;
+  float: left !important;
+  font-size: 3.5em !important;
+  line-height: 0.8 !important;
+  padding-right: 8px !important;
+  padding-top: 4px !important;
   color: #58180D !important;
-  font-weight: 700;
+  font-weight: 700 !important;
 }
 
-/* === ГОРИЗОНТАЛЬНАЯ ЛИНИЯ === */
-.dnd-style.markdown-preview-view hr {
+/* ============================================ */
+/* ===== СПИСКИ ===== */
+/* ============================================ */
+
+body .dnd-style ul,
+body .dnd-style ol {
+  padding-left: 1.8em !important;
+  margin: 0.6em 0 !important;
+}
+
+body .dnd-style li {
+  margin-bottom: 0.4em !important;
+  color: #1D1D1B !important;
+}
+
+body .dnd-style li::marker {
+  color: #58180D !important;
+}
+
+/* ============================================ */
+/* ===== ЖИРНЫЙ И КУРСИВ ===== */
+/* ============================================ */
+
+body .dnd-style strong,
+body .dnd-style b {
+  color: #58180D !important;
+  font-weight: 700 !important;
+}
+
+body .dnd-style em,
+body .dnd-style i {
+  color: #1D1D1B !important;
+}
+
+/* ============================================ */
+/* ===== ССЫЛКИ ===== */
+/* ============================================ */
+
+body .dnd-style a {
+  color: #58180D !important;
+  text-decoration: underline !important;
+  text-decoration-color: #C9AD6A !important;
+}
+
+body .dnd-style a:hover {
+  color: #9C2B1B !important;
+}
+
+/* ============================================ */
+/* ===== ГОРИЗОНТАЛЬНАЯ ЛИНИЯ ===== */
+/* ============================================ */
+
+body .dnd-style hr {
   border: none !important;
   height: 4px !important;
   background: linear-gradient(to right, transparent 0%, #9C2B1B 20%, #9C2B1B 80%, transparent 100%) !important;
   margin: 25px 0 !important;
 }
 
-/* === ЦИТАТЫ === */
-.dnd-style.markdown-preview-view blockquote,
-.dnd-style.markdown-preview-view blockquote p,
-.dnd-style.markdown-preview-view blockquote span {
-  color: #1D1D1B !important;
-}
+/* ============================================ */
+/* ===== ЦИТАТЫ (BLOCKQUOTE) ===== */
+/* ============================================ */
 
-.dnd-style.markdown-preview-view blockquote {
+body .dnd-style blockquote {
   background-color: #F8F4E8 !important;
   border-left: 4px solid #C9AD6A !important;
   border-top: 1px solid rgba(0, 0, 0, 0.12) !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
+  border-right: none !important;
   padding: 14px 18px !important;
   margin: 20px 0 !important;
-  font-style: italic;
+  font-style: italic !important;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.08) !important;
 }
 
-.dnd-style.markdown-preview-view blockquote p {
+body .dnd-style blockquote,
+body .dnd-style blockquote p,
+body .dnd-style blockquote span,
+body .dnd-style blockquote em,
+body .dnd-style blockquote strong {
+  color: #1D1D1B !important;
+}
+
+body .dnd-style blockquote p {
   text-indent: 0 !important;
   margin: 0.4em 0 !important;
 }
 
-/* === ТАБЛИЦЫ === */
-.dnd-style.markdown-preview-view table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
+body .dnd-style blockquote strong {
+  color: #58180D !important;
 }
 
-.dnd-style.markdown-preview-view thead {
+/* ============================================ */
+/* ===== ТАБЛИЦЫ ===== */
+/* ============================================ */
+
+body .dnd-style table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 20px 0 !important;
+}
+
+body .dnd-style thead {
   background-color: #E0E5C1 !important;
   border-bottom: 2px solid #58180D !important;
 }
 
-.dnd-style.markdown-preview-view th {
+body .dnd-style th {
   font-family: 'Cinzel', serif !important;
   font-weight: 700 !important;
   color: #58180D !important;
   padding: 10px 12px !important;
 }
 
-.dnd-style.markdown-preview-view td {
+body .dnd-style td {
   padding: 8px 12px !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
   color: #1D1D1B !important;
 }
 
-.dnd-style.markdown-preview-view tr:nth-child(odd) {
+body .dnd-style tr:nth-child(odd) {
   background-color: rgba(0, 0, 0, 0.04) !important;
 }
 
-/* === СПИСКИ === */
-.dnd-style.markdown-preview-view ul,
-.dnd-style.markdown-preview-view ol {
-  padding-left: 1.8em;
-  margin: 0.6em 0;
-}
+/* ============================================ */
+/* ===== CALLOUTS — БАЗОВЫЙ СТИЛЬ ===== */
+/* ============================================ */
 
-.dnd-style.markdown-preview-view li {
-  margin-bottom: 0.4em;
-  color: #1D1D1B !important;
-}
-
-.dnd-style.markdown-preview-view li::marker {
-  color: #58180D !important;
-}
-
-/* === ЖИРНЫЙ === */
-.dnd-style.markdown-preview-view strong,
-.dnd-style.markdown-source-view .cm-strong {
-  color: #58180D !important;
-  font-weight: 700 !important;
-}
-
-/* === КУРСИВ === */
-.dnd-style.markdown-preview-view em,
-.dnd-style.markdown-source-view .cm-em {
-  color: #1D1D1B !important;
-}
-
-/* === ССЫЛКИ === */
-.dnd-style.markdown-preview-view a {
-  color: #58180D !important;
-  text-decoration: underline !important;
-  text-decoration-color: #C9AD6A !important;
-}
-
-/* === CALLOUTS — ВСЕ ТИПЫ === */
-.dnd-style.markdown-preview-view .callout {
+body .dnd-style .callout {
   background: linear-gradient(135deg, #FDF1DC 0%, #F5E6C8 100%) !important;
   border: 2px solid #C9AD6A !important;
   border-radius: 0 !important;
@@ -232,54 +267,82 @@
   margin: 20px 0 !important;
 }
 
-.dnd-style.markdown-preview-view .callout-title {
+/* Заголовок callout */
+body .dnd-style .callout .callout-title {
   font-family: 'Cinzel', serif !important;
-  color: #58180D !important;
   font-weight: 700 !important;
   font-size: 1.15em !important;
   border-bottom: 2px solid #9C2B1B !important;
   padding: 12px 16px !important;
   margin: 0 !important;
   background: rgba(255, 255, 255, 0.3) !important;
+  color: #58180D !important;
 }
 
-.dnd-style.markdown-preview-view .callout-title-inner {
+body .dnd-style .callout .callout-title .callout-title-inner {
   color: #58180D !important;
   font-weight: 700 !important;
 }
 
-.dnd-style.markdown-preview-view .callout-icon {
+/* Иконка callout */
+body .dnd-style .callout .callout-icon {
   color: #58180D !important;
 }
 
-.dnd-style.markdown-preview-view .callout-icon svg {
+body .dnd-style .callout .callout-icon svg {
+  stroke: #58180D !important;
   color: #58180D !important;
+}
+
+body .dnd-style .callout .callout-icon svg path {
+  fill: #58180D !important;
   stroke: #58180D !important;
 }
 
-.dnd-style.markdown-preview-view .callout-content {
+/* Контент callout */
+body .dnd-style .callout .callout-content {
   padding: 12px 16px !important;
-}
-
-.dnd-style.markdown-preview-view .callout-content,
-.dnd-style.markdown-preview-view .callout-content p,
-.dnd-style.markdown-preview-view .callout-content li,
-.dnd-style.markdown-preview-view .callout-content span,
-.dnd-style.markdown-preview-view .callout-content div,
-.dnd-style.markdown-preview-view .callout-content td {
+  background: transparent !important;
   color: #1D1D1B !important;
 }
 
-.dnd-style.markdown-preview-view .callout-content p {
+body .dnd-style .callout .callout-content p {
   text-indent: 0 !important;
+  margin: 0.4em 0 !important;
+  color: #1D1D1B !important;
 }
 
-.dnd-style.markdown-preview-view .callout-content strong {
+body .dnd-style .callout .callout-content span {
+  color: #1D1D1B !important;
+}
+
+body .dnd-style .callout .callout-content li {
+  color: #1D1D1B !important;
+}
+
+body .dnd-style .callout .callout-content em {
+  color: #1D1D1B !important;
+}
+
+body .dnd-style .callout .callout-content strong,
+body .dnd-style .callout .callout-content b {
   color: #58180D !important;
 }
 
-/* === STATBLOCK === */
-.dnd-style.markdown-preview-view .callout[data-callout="statblock"] {
+body .dnd-style .callout .callout-content a {
+  color: #58180D !important;
+}
+
+body .dnd-style .callout .callout-content code {
+  color: #58180D !important;
+  background-color: rgba(201, 173, 106, 0.25) !important;
+}
+
+/* ============================================ */
+/* ===== STATBLOCK ===== */
+/* ============================================ */
+
+body .dnd-style .callout[data-callout="statblock"] {
   background: linear-gradient(to bottom, #FDF1DC 0%, #F8E4B8 50%, #F0DAA5 100%) !important;
   border: none !important;
   border-top: 5px solid #58180D !important;
@@ -287,7 +350,7 @@
   box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.06), 0 3px 10px rgba(0, 0, 0, 0.15) !important;
 }
 
-.dnd-style.markdown-preview-view .callout[data-callout="statblock"] .callout-title {
+body .dnd-style .callout[data-callout="statblock"] .callout-title {
   font-size: 1.5em !important;
   letter-spacing: 1px !important;
   border-bottom: 2px solid #58180D !important;
@@ -296,56 +359,137 @@
   color: #58180D !important;
 }
 
-.dnd-style.markdown-preview-view .callout[data-callout="statblock"] .callout-title-inner {
+body .dnd-style .callout[data-callout="statblock"] .callout-title .callout-title-inner {
   color: #58180D !important;
 }
 
-.dnd-style.markdown-preview-view .callout[data-callout="statblock"] .callout-content {
+body .dnd-style .callout[data-callout="statblock"] .callout-content {
   padding: 14px 18px !important;
-}
-
-.dnd-style.markdown-preview-view .callout[data-callout="statblock"] .callout-content p,
-.dnd-style.markdown-preview-view .callout[data-callout="statblock"] .callout-content li,
-.dnd-style.markdown-preview-view .callout[data-callout="statblock"] .callout-content span {
   color: #1D1D1B !important;
 }
 
-/* === READ-ALOUD === */
-.dnd-style.markdown-preview-view .callout[data-callout="read"],
-.dnd-style.markdown-preview-view .callout[data-callout="readaloud"] {
+body .dnd-style .callout[data-callout="statblock"] .callout-content p {
+  color: #1D1D1B !important;
+}
+
+body .dnd-style .callout[data-callout="statblock"] .callout-content span {
+  color: #1D1D1B !important;
+}
+
+body .dnd-style .callout[data-callout="statblock"] .callout-content li {
+  color: #1D1D1B !important;
+}
+
+body .dnd-style .callout[data-callout="statblock"] .callout-content em {
+  color: #1D1D1B !important;
+}
+
+body .dnd-style .callout[data-callout="statblock"] .callout-content strong {
+  color: #58180D !important;
+}
+
+/* ============================================ */
+/* ===== READ / READALOUD ===== */
+/* ============================================ */
+
+body .dnd-style .callout[data-callout="read"],
+body .dnd-style .callout[data-callout="readaloud"] {
   background: linear-gradient(135deg, #E8E8E8 0%, #DEDEDE 100%) !important;
   border: none !important;
   border-left: 5px solid #58180D !important;
 }
 
-.dnd-style.markdown-preview-view .callout[data-callout="read"] .callout-title,
-.dnd-style.markdown-preview-view .callout[data-callout="readaloud"] .callout-title {
+body .dnd-style .callout[data-callout="read"] .callout-title,
+body .dnd-style .callout[data-callout="readaloud"] .callout-title {
   display: none !important;
 }
 
-.dnd-style.markdown-preview-view .callout[data-callout="read"] .callout-content p,
-.dnd-style.markdown-preview-view .callout[data-callout="readaloud"] .callout-content p {
+body .dnd-style .callout[data-callout="read"] .callout-content p,
+body .dnd-style .callout[data-callout="readaloud"] .callout-content p {
   color: #1D1D1B !important;
   font-style: italic !important;
 }
 
-/* === PROPERTIES (свойства заметки) === */
-.dnd-style.markdown-preview-view .metadata-container,
-.dnd-style.markdown-preview-view .metadata-content,
-.dnd-style.markdown-preview-view .metadata-property,
-.dnd-style.markdown-preview-view .metadata-property-key,
-.dnd-style.markdown-preview-view .metadata-property-value,
-.dnd-style.markdown-preview-view .multi-select-pill,
-.dnd-style.markdown-preview-view .multi-select-pill-content {
+body .dnd-style .callout[data-callout="read"] .callout-content span,
+body .dnd-style .callout[data-callout="readaloud"] .callout-content span {
+  color: #1D1D1B !important;
+}
+
+/* ============================================ */
+/* ===== NOTE / DM ===== */
+/* ============================================ */
+
+body .dnd-style .callout[data-callout="note"],
+body .dnd-style .callout[data-callout="dm"] {
+  background: linear-gradient(135deg, #FFF8DC 0%, #F5EBC8 100%) !important;
+  border: 1px dashed #C9AD6A !important;
+}
+
+body .dnd-style .callout[data-callout="note"] .callout-content p,
+body .dnd-style .callout[data-callout="dm"] .callout-content p {
+  color: #1D1D1B !important;
+}
+
+/* ============================================ */
+/* ===== ИЗОБРАЖЕНИЯ ===== */
+/* ============================================ */
+
+body .dnd-style img {
+  border: 3px solid #C9AD6A !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+  margin: 15px auto !important;
+  display: block !important;
+  max-width: 100% !important;
+}
+
+/* ============================================ */
+/* ===== КОД ===== */
+/* ============================================ */
+
+body .dnd-style code {
+  background-color: rgba(201, 173, 106, 0.25) !important;
+  padding: 2px 6px !important;
+  border-radius: 3px !important;
+  font-family: 'Courier New', monospace !important;
+  font-size: 0.9em !important;
   color: #58180D !important;
 }
 
-/* === СКРЫТЬ FRONTMATTER === */
-.dnd-style.markdown-preview-view .frontmatter-container {
+/* ============================================ */
+/* ===== PROPERTIES (скрыть) ===== */
+/* ============================================ */
+
+body .dnd-style .frontmatter-container,
+body .dnd-style .metadata-container {
   display: none !important;
 }
 
-/* === ВЫДЕЛЕНИЕ ТЕКСТА === */
-.dnd-style ::selection {
+/* ============================================ */
+/* ===== ВЫДЕЛЕНИЕ ТЕКСТА ===== */
+/* ============================================ */
+
+body .dnd-style ::selection {
   background: rgba(201, 173, 106, 0.5) !important;
+  color: #1D1D1B !important;
+}
+
+/* ============================================ */
+/* ===== СКРОЛЛБАР ===== */
+/* ============================================ */
+
+body .dnd-style::-webkit-scrollbar {
+  width: 12px !important;
+}
+
+body .dnd-style::-webkit-scrollbar-track {
+  background: #D8CEB8 !important;
+}
+
+body .dnd-style::-webkit-scrollbar-thumb {
+  background: #C9AD6A !important;
+  border-radius: 6px !important;
+}
+
+body .dnd-style::-webkit-scrollbar-thumb:hover {
+  background: #58180D !important;
 }
