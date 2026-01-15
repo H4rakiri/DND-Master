@@ -1,4 +1,4 @@
-/* D&D Homebrewery Style for Obsidian - Complete Rewrite */
+/* D&D Homebrewery Style for Obsidian */
 
 .dnd-style {
   --page-bg: #e8dcc8;
@@ -10,10 +10,10 @@
   --blockquote-bg: #ebe7e0;
 }
 
-.dnd-style .markdown-preview-view {
+/* Основной контейнер с текстурой */
+.dnd-style.markdown-preview-view {
   background-color: var(--page-bg) !important;
   background-image: 
-    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noise"><feTurbulence baseFrequency="0.9" numOctaves="4" result="noise" /></filter><rect width="100" height="100" fill="%23e8dcc8"/><rect width="100" height="100" fill="%23e8dcc8" filter="url(%23noise)" opacity="0.05"/></svg>'),
     repeating-linear-gradient(
       90deg,
       transparent,
@@ -28,24 +28,21 @@
       rgba(107, 68, 35, 0.01) 2px,
       rgba(107, 68, 35, 0.01) 4px
     );
-  background-size: cover, 100% 100%, 100% 100%;
-  background-attachment: scroll, fixed, fixed;
   color: var(--text-color) !important;
-  font-family: 'Georgia', 'Times New Roman', serif !important;
+  font-family: Georgia, 'Times New Roman', serif !important;
   line-height: 1.5 !important;
   padding: 60px 80px !important;
-  max-width: 900px !important;
-  margin: 0 auto !important;
 }
 
-.dnd-style .markdown-source-view {
+.dnd-style.markdown-source-view {
   background-color: var(--page-bg) !important;
   color: var(--text-color) !important;
-  font-family: 'Georgia', 'Times New Roman', serif !important;
+  font-family: Georgia, 'Times New Roman', serif !important;
+  padding: 60px 80px !important;
 }
 
-/* Заголовки */
-.dnd-style h1 {
+/* Заголовок H1 */
+.dnd-style.markdown-preview-view h1 {
   color: var(--accent-color) !important;
   font-size: 2.6rem !important;
   border-bottom: 3px solid var(--border-color) !important;
@@ -55,10 +52,10 @@
   font-weight: bold !important;
   text-transform: uppercase !important;
   letter-spacing: 2px !important;
-  text-align: left !important;
 }
 
-.dnd-style h2 {
+/* Заголовок H2 */
+.dnd-style.markdown-preview-view h2 {
   color: var(--accent-color) !important;
   font-size: 1.9rem !important;
   border-bottom: 2px solid var(--border-color) !important;
@@ -70,105 +67,88 @@
   letter-spacing: 1.5px !important;
 }
 
-.dnd-style h3 {
+/* Заголовок H3 */
+.dnd-style.markdown-preview-view h3 {
   color: var(--accent-color) !important;
   font-size: 1.3rem !important;
   margin-top: 1.2rem !important;
   margin-bottom: 0.8rem !important;
   font-weight: bold !important;
-  text-transform: uppercase !important;
 }
 
-.dnd-style h4,
-.dnd-style h5,
-.dnd-style h6 {
+.dnd-style.markdown-preview-view h4,
+.dnd-style.markdown-preview-view h5,
+.dnd-style.markdown-preview-view h6 {
   color: var(--accent-color) !important;
   margin-top: 1rem !important;
   margin-bottom: 0.5rem !important;
   font-weight: bold !important;
 }
 
-/* Основной текст */
-.dnd-style p {
-  margin-bottom: 0.8rem !important;
-  text-align: justify !important;
+/* Параграфы */
+.dnd-style.markdown-preview-view p {
   color: var(--text-color) !important;
+  text-align: justify !important;
+  margin-bottom: 0.8rem !important;
   line-height: 1.6 !important;
   font-size: 1rem !important;
 }
 
 /* Списки */
-.dnd-style ul,
-.dnd-style ol {
+.dnd-style.markdown-preview-view ul,
+.dnd-style.markdown-preview-view ol {
   margin-left: 2.5rem !important;
   margin-bottom: 1rem !important;
-  margin-top: 0.5rem !important;
   line-height: 1.6 !important;
 }
 
-.dnd-style li {
+.dnd-style.markdown-preview-view li {
   margin-bottom: 0.5rem !important;
   color: var(--text-color) !important;
 }
 
-.dnd-style ul li {
-  list-style-type: disc !important;
-}
-
-.dnd-style ol li {
-  list-style-type: decimal !important;
-}
-
-/* Blockquote - для выделенных текстов типа правил */
-.dnd-style blockquote {
+/* Blockquotes */
+.dnd-style.markdown-preview-view blockquote {
   border-left: 5px solid var(--border-color) !important;
   background-color: var(--blockquote-bg) !important;
   padding: 1rem 1.5rem !important;
   margin: 1.2rem 0 !important;
-  border-radius: 0 !important;
   color: var(--text-color) !important;
-  font-style: italic !important;
 }
 
-.dnd-style blockquote p {
+.dnd-style.markdown-preview-view blockquote p {
   margin-bottom: 0 !important;
 }
 
-.dnd-style blockquote strong {
-  font-style: normal !important;
-  color: var(--accent-color) !important;
-}
-
 /* Таблицы */
-.dnd-style table {
+.dnd-style.markdown-preview-view table {
   width: 100% !important;
   border-collapse: collapse !important;
   margin: 1.5rem 0 !important;
-  background-color: white !important;
   border: 2px solid var(--border-color) !important;
 }
 
-.dnd-style table thead {
+.dnd-style.markdown-preview-view thead {
   background-color: var(--header-bg) !important;
-  border-bottom: 3px solid var(--border-color) !important;
 }
 
-.dnd-style table th {
+.dnd-style.markdown-preview-view th {
   padding: 0.9rem 1rem !important;
   text-align: left !important;
   color: var(--accent-color) !important;
   font-weight: bold !important;
+  border-bottom: 3px solid var(--border-color) !important;
   border-right: 1px solid var(--border-color) !important;
-  font-size: 0.95rem !important;
   text-transform: uppercase !important;
   letter-spacing: 0.5px !important;
+  font-size: 0.95rem !important;
 }
 
-.dnd-style table th:last-child {
+.dnd-style.markdown-preview-view th:last-child {
   border-right: none !important;
 }
 
-.dnd-style table td {
+.dnd-style.markdown-preview-view td {
   padding: 0.8rem 1rem !important;
   border-bottom: 1px solid #d9cfc5 !important;
   border-right: 1px solid #d9cfc5 !important;
@@ -176,41 +156,20 @@
   font-size: 0.95rem !important;
 }
 
-.dnd-style table td:last-child {
+.dnd-style.markdown-preview-view td:last-child {
   border-right: none !important;
 }
 
-.dnd-style table tbody tr:nth-child(odd) {
+.dnd-style.markdown-preview-view tbody tr:nth-child(odd) {
   background-color: rgba(240, 235, 228, 0.7) !important;
 }
 
-.dnd-style table tbody tr:hover {
+.dnd-style.markdown-preview-view tbody tr:hover {
   background-color: var(--column-bg) !important;
 }
 
-/* Таблицы для двухколоночного макета (без границ) */
-.dnd-style table.two-column {
-  border: none !important;
-  background: transparent !important;
-}
-
-.dnd-style table.two-column thead {
-  display: none !important;
-}
-
-.dnd-style table.two-column th,
-.dnd-style table.two-column td {
-  border: none !important;
-  padding: 0 1rem 0 0 !important;
-  vertical-align: top !important;
-}
-
-.dnd-style table.two-column tbody tr {
-  background: transparent !important;
-}
-
 /* Инлайн код */
-.dnd-style code {
+.dnd-style.markdown-preview-view code {
   background-color: rgba(139, 111, 71, 0.15) !important;
   color: #6b4423 !important;
   padding: 0.2rem 0.5rem !important;
@@ -219,27 +178,25 @@
   font-size: 0.9rem !important;
 }
 
-/* Блок кода */
-.dnd-style pre {
+/* Блок кода (pre) */
+.dnd-style.markdown-preview-view pre {
   background-color: #2b2b2b !important;
   color: #d4af37 !important;
   padding: 1.5rem !important;
-  border-radius: 0 !important;
-  overflow-x: auto !important;
   border: 2px solid var(--border-color) !important;
   margin: 1.5rem 0 !important;
   line-height: 1.4 !important;
+  overflow-x: auto !important;
 }
 
-.dnd-style pre code {
+.dnd-style.markdown-preview-view pre code {
   background-color: transparent !important;
   color: #d4af37 !important;
   padding: 0 !important;
-  font-family: 'Courier New', 'Consolas', monospace !important;
 }
 
 /* Горизонтальная линия */
-.dnd-style hr {
+.dnd-style.markdown-preview-view hr {
   border: none !important;
   height: 3px !important;
   background: linear-gradient(
@@ -254,42 +211,47 @@
 }
 
 /* Ссылки */
-.dnd-style a {
+.dnd-style.markdown-preview-view a {
   color: var(--accent-color) !important;
   text-decoration: underline !important;
-  font-weight: 500 !important;
 }
 
-.dnd-style a:hover {
+.dnd-style.markdown-preview-view a:hover {
   color: #8b6f47 !important;
 }
 
 /* Жирный текст */
-.dnd-style strong,
-.dnd-style b {
+.dnd-style.markdown-preview-view strong {
   color: var(--accent-color) !important;
   font-weight: bold !important;
 }
 
 /* Курсив */
-.dnd-style em,
-.dnd-style i {
+.dnd-style.markdown-preview-view em {
   font-style: italic !important;
   color: var(--text-color) !important;
 }
 
-/* Callout блоки */
-.dnd-style .callout {
-  background-color: var(--column-bg) !important;
-  border-left: 5px solid var(--border-color) !important;
-  padding: 1rem 1.5rem !important;
-  margin: 1rem 0 !important;
-  border-radius: 0 !important;
+/* Зачеркивание */
+.dnd-style.markdown-preview-view del,
+.dnd-style.markdown-preview-view s {
+  color: #999 !important;
+}
+
+/* Подчеркивание */
+.dnd-style.markdown-preview-view u {
+  text-decoration: underline !important;
+  text-decoration-color: var(--border-color) !important;
+}
+
+/* Выделение */
+.dnd-style.markdown-preview-view mark {
+  background-color: rgba(212, 165, 116, 0.3) !important;
   color: var(--text-color) !important;
 }
 
 /* Изображения */
-.dnd-style img {
+.dnd-style.markdown-preview-view img {
   max-width: 100% !important;
   height: auto !important;
   border: 2px solid var(--border-color) !important;
@@ -297,26 +259,17 @@
   display: block !important;
 }
 
-/* Strikethrough */
-.dnd-style del,
-.dnd-style s {
-  color: #999 !important;
-}
-
-/* Подчеркивание */
-.dnd-style u {
-  text-decoration: underline !important;
-  text-decoration-color: var(--border-color) !important;
-}
-
-/* Выделенный текст */
-.dnd-style mark {
-  background-color: rgba(212, 165, 116, 0.3) !important;
+/* Callout блоки (Obsidian) */
+.dnd-style .callout {
+  background-color: var(--column-bg) !important;
+  border-left: 5px solid var(--border-color) !important;
+  padding: 1rem 1.5rem !important;
+  margin: 1rem 0 !important;
   color: var(--text-color) !important;
 }
 
-/* Small text */
-.dnd-style small {
+/* Small текст */
+.dnd-style.markdown-preview-view small {
   font-size: 0.85rem !important;
   color: #666 !important;
 }
