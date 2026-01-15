@@ -1,22 +1,18 @@
 /* D&D Homebrewery Style для Obsidian */
-/* Адаптация оригинального CSS Homebrewery */
+/* Использует ресурсы напрямую с Homebrewery */
 /* cssclasses: dnd-style */
 
-/* === Импорт шрифтов (замена Homebrewery шрифтов) === */
+/* === Импорт шрифтов === */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap');
 
 /* ============================================ */
-/* ===== ПЕРЕМЕННЫЕ (из Homebrewery) ===== */
+/* ===== ПЕРЕМЕННЫЕ ===== */
 /* ============================================ */
 
-.dnd-style,
-.dnd-style.markdown-preview-view,
-.dnd-style.markdown-reading-view,
-.dnd-style.markdown-source-view,
-.dnd-style.markdown-source-view.mod-cm6 .cm-editor {
+.dnd-style {
   --HB_Color_Background: #EEE5CE;
   --HB_Color_Accent: #E0E5C1;
   --HB_Color_HeaderUnderline: #C0AD6A;
@@ -27,23 +23,25 @@
   --HB_Color_Footnotes: #C9AD6A;
   --HB_Color_Text: #1D1D1B;
   
+  /* URL ресурсов Homebrewery */
+  --HB_Asset_Background: url('https://homebrewery.naturalcrit.com/assets/parchmentBackground.jpg');
+  --HB_Asset_BackgroundGrayscale: url('https://homebrewery.naturalcrit.com/assets/parchmentBackgroundGrayscale.jpg');
+  --HB_Asset_NoteBorder: url('https://homebrewery.naturalcrit.com/assets/noteBorder.png');
+  --HB_Asset_DescriptiveBorder: url('https://homebrewery.naturalcrit.com/assets/descriptiveBorder.png');
+  --HB_Asset_MonsterBorder: url('https://homebrewery.naturalcrit.com/assets/monsterBorderFancy.png');
+  --HB_Asset_RedTriangle: url('https://homebrewery.naturalcrit.com/assets/redTriangle.png');
+  
   /* Переопределение переменных Obsidian */
   --text-normal: var(--HB_Color_Text) !important;
   --text-muted: #3D3D3B !important;
-  --text-faint: #5D5D5B !important;
   --text-accent: var(--HB_Color_HeaderText) !important;
   --h1-color: var(--HB_Color_HeaderText) !important;
   --h2-color: var(--HB_Color_HeaderText) !important;
   --h3-color: var(--HB_Color_HeaderText) !important;
   --h4-color: var(--HB_Color_HeaderText) !important;
   --h5-color: var(--HB_Color_HeaderText) !important;
-  --h6-color: var(--HB_Color_HeaderText) !important;
   --bold-color: var(--HB_Color_HeaderText) !important;
-  --italic-color: var(--HB_Color_Text) !important;
   --link-color: var(--HB_Color_HeaderText) !important;
-  --inline-title-color: var(--HB_Color_HeaderText) !important;
-  --hr-color: var(--HB_Color_HorizontalRule) !important;
-  --blockquote-border-color: var(--HB_Color_HeaderUnderline) !important;
 }
 
 /* ============================================ */
@@ -71,9 +69,9 @@
 .dnd-style.markdown-reading-view,
 .dnd-style.markdown-source-view.mod-cm6 .cm-scroller {
   background-color: var(--HB_Color_Background) !important;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23d4c9a8' fill-opacity='0.12'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important;
+  background-image: var(--HB_Asset_Background) !important;
+  background-size: cover !important;
   padding: 40px 60px !important;
-  /* BookInsanityRemake → Libre Baskerville */
   font-family: 'Libre Baskerville', Georgia, serif !important;
   font-size: 14px !important;
   line-height: 1.25em !important;
@@ -105,7 +103,7 @@
 .dnd-style.markdown-preview-view p,
 .dnd-style.markdown-reading-view p {
   line-height: 1.25em !important;
-  margin: 0 0 0.5em 0 !important;
+  margin: 0 0 0.325cm 0 !important;
   color: var(--HB_Color_Text) !important;
 }
 
@@ -119,7 +117,7 @@
 }
 
 /* ============================================ */
-/* ===== ЗАГОЛОВКИ (MrEavesRemake → Cinzel) ===== */
+/* ===== ЗАГОЛОВКИ ===== */
 /* ============================================ */
 
 .dnd-style.markdown-preview-view h1,
@@ -140,27 +138,28 @@
 .dnd-style.markdown-preview-view h1,
 .dnd-style.markdown-reading-view h1,
 .dnd-style.markdown-source-view .cm-header-1 {
-  font-size: 2.2em !important;
+  font-size: 0.89cm !important;
   line-height: 1em !important;
-  margin-bottom: 0.5em !important;
+  margin-bottom: 0.18cm !important;
   color: var(--HB_Color_HeaderText) !important;
 }
 
-/* Буквица после H1 (SolberaImitationRemake → Cinzel Decorative) */
+/* Буквица */
 .dnd-style.markdown-preview-view h1 + p::first-letter,
 .dnd-style.markdown-reading-view h1 + p::first-letter {
   float: left !important;
   padding-bottom: 2px !important;
   padding-right: 8px !important;
-  margin-top: -0.1em !important;
+  margin-top: -0.1cm !important;
   font-family: 'Cinzel Decorative', serif !important;
-  font-size: 3.5em !important;
-  line-height: 0.8em !important;
-  color: var(--HB_Color_HeaderText) !important;
-  font-weight: 700 !important;
+  font-size: 3.5cm !important;
+  line-height: 1em !important;
+  color: rgba(0, 0, 0, 0) !important;
+  background-image: linear-gradient(-45deg, #322814, #998250, #322814) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
 }
 
-/* Первая строка после H1 — капитель */
 .dnd-style.markdown-preview-view h1 + p::first-line,
 .dnd-style.markdown-reading-view h1 + p::first-line {
   font-variant: small-caps !important;
@@ -175,9 +174,8 @@
 .dnd-style.markdown-preview-view h2,
 .dnd-style.markdown-reading-view h2,
 .dnd-style.markdown-source-view .cm-header-2 {
-  font-size: 1.7em !important;
-  line-height: 1em !important;
-  margin-top: 0.8em !important;
+  font-size: 0.75cm !important;
+  line-height: 0.988em !important;
   color: var(--HB_Color_HeaderText) !important;
 }
 
@@ -185,11 +183,10 @@
 .dnd-style.markdown-preview-view h3,
 .dnd-style.markdown-reading-view h3,
 .dnd-style.markdown-source-view .cm-header-3 {
-  font-size: 1.4em !important;
-  line-height: 1em !important;
+  font-size: 0.575cm !important;
+  line-height: 0.995em !important;
   border-bottom: 2px solid var(--HB_Color_HeaderUnderline) !important;
-  padding-bottom: 2px !important;
-  margin-top: 0.6em !important;
+  margin-top: 0.17cm !important;
   color: var(--HB_Color_HeaderText) !important;
 }
 
@@ -197,20 +194,21 @@
 .dnd-style.markdown-preview-view h4,
 .dnd-style.markdown-reading-view h4,
 .dnd-style.markdown-source-view .cm-header-4 {
-  font-size: 1.15em !important;
-  line-height: 1em !important;
-  margin-top: 0.5em !important;
+  font-size: 0.458cm !important;
+  line-height: 0.971em !important;
+  margin-top: 0.235cm !important;
   color: var(--HB_Color_HeaderText) !important;
 }
 
-/* H5 (ScalySansSmallCapsRemake) */
+/* H5 */
 .dnd-style.markdown-preview-view h5,
 .dnd-style.markdown-reading-view h5,
 .dnd-style.markdown-source-view .cm-header-5 {
   font-family: 'Source Sans Pro', sans-serif !important;
-  font-size: 1em !important;
+  font-size: 0.423cm !important;
   font-variant: small-caps !important;
-  letter-spacing: 0.05em !important;
+  line-height: 0.951em !important;
+  margin-top: 0.2cm !important;
   color: var(--HB_Color_HeaderText) !important;
 }
 
@@ -271,17 +269,16 @@
 }
 
 /* ============================================ */
-/* ===== ТАБЛИЦЫ (ScalySansRemake) ===== */
+/* ===== ТАБЛИЦЫ ===== */
 /* ============================================ */
 
 .dnd-style.markdown-preview-view table,
 .dnd-style.markdown-reading-view table {
   font-family: 'Source Sans Pro', sans-serif !important;
-  font-size: 13px !important;
-  line-height: 1.2em !important;
+  font-size: 0.318cm !important;
+  line-height: 16px !important;
   width: 100% !important;
   border-collapse: collapse !important;
-  margin: 15px 0 !important;
 }
 
 .dnd-style.markdown-preview-view thead,
@@ -291,362 +288,4 @@
 
 .dnd-style.markdown-preview-view th,
 .dnd-style.markdown-reading-view th {
-  padding: 4px 6px !important;
-  vertical-align: bottom !important;
-  color: var(--HB_Color_HeaderText) !important;
-  font-weight: 800 !important;
-}
-
-.dnd-style.markdown-preview-view td,
-.dnd-style.markdown-reading-view td {
-  padding: 4px 6px !important;
-  color: var(--HB_Color_Text) !important;
-}
-
-.dnd-style.markdown-preview-view tbody tr:nth-child(odd),
-.dnd-style.markdown-reading-view tbody tr:nth-child(odd) {
-  background-color: var(--HB_Color_Accent) !important;
-}
-
-.dnd-style.markdown-source-view .HyperMD-table-row,
-.dnd-style.markdown-source-view .cm-hmd-table-sep {
-  color: var(--HB_Color_Text) !important;
-}
-
-/* ============================================ */
-/* ===== ГОРИЗОНТАЛЬНАЯ ЛИНИЯ ===== */
-/* ============================================ */
-
-.dnd-style.markdown-preview-view hr,
-.dnd-style.markdown-reading-view hr,
-.dnd-style.markdown-source-view hr {
-  visibility: visible !important;
-  border: none !important;
-  height: 6px !important;
-  margin: 15px 0 !important;
-  background: linear-gradient(to right, 
-    transparent 0%, 
-    var(--HB_Color_HorizontalRule) 15%, 
-    var(--HB_Color_HorizontalRule) 85%, 
-    transparent 100%) !important;
-}
-
-/* ============================================ */
-/* ===== ЦИТАТЫ (.quote) ===== */
-/* ============================================ */
-
-.dnd-style.markdown-preview-view blockquote,
-.dnd-style.markdown-reading-view blockquote {
-  font-style: italic !important;
-  line-height: 1.4em !important;
-  padding: 10px 15px !important;
-  margin: 15px 0 !important;
-  border-left: 4px solid var(--HB_Color_HeaderUnderline) !important;
-  background-color: rgba(0, 0, 0, 0.02) !important;
-}
-
-.dnd-style.markdown-preview-view blockquote p:first-child::first-line,
-.dnd-style.markdown-reading-view blockquote p:first-child::first-line {
-  font-size: 1.1em !important;
-  font-style: normal !important;
-  font-variant: small-caps !important;
-}
-
-.dnd-style.markdown-preview-view blockquote,
-.dnd-style.markdown-preview-view blockquote *,
-.dnd-style.markdown-reading-view blockquote,
-.dnd-style.markdown-reading-view blockquote * {
-  color: var(--HB_Color_Text) !important;
-}
-
-.dnd-style.markdown-preview-view blockquote strong,
-.dnd-style.markdown-reading-view blockquote strong {
-  color: var(--HB_Color_HeaderText) !important;
-}
-
-.dnd-style.markdown-preview-view blockquote p,
-.dnd-style.markdown-reading-view blockquote p {
-  text-indent: 0 !important;
-  margin: 0.3em 0 !important;
-}
-
-.dnd-style.markdown-source-view .HyperMD-quote {
-  border-left: 4px solid var(--HB_Color_HeaderUnderline) !important;
-  padding-left: 12px !important;
-  color: var(--HB_Color_Text) !important;
-  font-style: italic !important;
-}
-
-/* ============================================ */
-/* ===== КОД ===== */
-/* ============================================ */
-
-.dnd-style.markdown-preview-view code,
-.dnd-style.markdown-reading-view code,
-.dnd-style.markdown-source-view .cm-inline-code {
-  padding: 2px 6px !important;
-  font-size: 0.9em !important;
-  color: var(--HB_Color_HeaderText) !important;
-  background-color: #FAF7EA !important;
-  border-radius: 4px !important;
-}
-
-/* ============================================ */
-/* ===== CALLOUTS — NOTE (.note) ===== */
-/* ============================================ */
-
-.dnd-style .callout[data-callout="note"],
-.dnd-style .callout[data-callout="info"] {
-  font-family: 'Source Sans Pro', sans-serif !important;
-  font-size: 13px !important;
-  padding: 0 !important;
-  background-color: var(--HB_Color_Accent) !important;
-  border: 1px solid #9C7B50 !important;
-  border-radius: 0 !important;
-  box-shadow: 1px 4px 14px rgba(0, 0, 0, 0.3) !important;
-  margin: 15px 0 !important;
-}
-
-.dnd-style .callout[data-callout="note"] .callout-title,
-.dnd-style .callout[data-callout="info"] .callout-title {
-  font-family: 'Source Sans Pro', sans-serif !important;
-  font-variant: small-caps !important;
-  font-size: 1.1em !important;
-  padding: 8px 12px !important;
-  background: transparent !important;
-  border-bottom: none !important;
-  color: var(--HB_Color_HeaderText) !important;
-}
-
-.dnd-style .callout[data-callout="note"] .callout-title-inner,
-.dnd-style .callout[data-callout="info"] .callout-title-inner {
-  color: var(--HB_Color_HeaderText) !important;
-  font-weight: 700 !important;
-}
-
-.dnd-style .callout[data-callout="note"] .callout-content,
-.dnd-style .callout[data-callout="info"] .callout-content {
-  padding: 8px 12px !important;
-  line-height: 1.2em !important;
-}
-
-.dnd-style .callout[data-callout="note"] .callout-content *,
-.dnd-style .callout[data-callout="info"] .callout-content * {
-  color: var(--HB_Color_Text) !important;
-}
-
-.dnd-style .callout[data-callout="note"] .callout-content p,
-.dnd-style .callout[data-callout="info"] .callout-content p {
-  text-indent: 0 !important;
-  margin: 0.3em 0 !important;
-}
-
-/* ============================================ */
-/* ===== CALLOUTS — DESCRIPTIVE (.descriptive) / READ-ALOUD ===== */
-/* ============================================ */
-
-.dnd-style .callout[data-callout="read"],
-.dnd-style .callout[data-callout="readaloud"],
-.dnd-style .callout[data-callout="descriptive"] {
-  font-family: 'Source Sans Pro', sans-serif !important;
-  font-size: 13px !important;
-  padding: 0 !important;
-  background-color: #FAF7EA !important;
-  border: 2px solid #C9AD6A !important;
-  border-radius: 0 !important;
-  box-shadow: 0 0 6px #FAF7EA !important;
-  margin: 15px 0 !important;
-}
-
-.dnd-style .callout[data-callout="read"] .callout-title,
-.dnd-style .callout[data-callout="readaloud"] .callout-title,
-.dnd-style .callout[data-callout="descriptive"] .callout-title {
-  display: none !important;
-}
-
-.dnd-style .callout[data-callout="read"] .callout-content,
-.dnd-style .callout[data-callout="readaloud"] .callout-content,
-.dnd-style .callout[data-callout="descriptive"] .callout-content {
-  padding: 10px 14px !important;
-  line-height: 1.5em !important;
-}
-
-.dnd-style .callout[data-callout="read"] .callout-content *,
-.dnd-style .callout[data-callout="readaloud"] .callout-content *,
-.dnd-style .callout[data-callout="descriptive"] .callout-content * {
-  color: var(--HB_Color_Text) !important;
-}
-
-.dnd-style .callout[data-callout="read"] .callout-content p,
-.dnd-style .callout[data-callout="readaloud"] .callout-content p,
-.dnd-style .callout[data-callout="descriptive"] .callout-content p {
-  text-indent: 0 !important;
-  margin: 0.3em 0 !important;
-}
-
-/* ============================================ */
-/* ===== CALLOUTS — MONSTER / STATBLOCK ===== */
-/* ============================================ */
-
-.dnd-style .callout[data-callout="statblock"],
-.dnd-style .callout[data-callout="monster"] {
-  font-family: 'Source Sans Pro', sans-serif !important;
-  font-size: 13px !important;
-  padding: 0 !important;
-  background-color: var(--HB_Color_MonsterStatBackground) !important;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23d4c9a8' fill-opacity='0.15'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important;
-  border: none !important;
-  border-top: 4px solid var(--HB_Color_HeaderText) !important;
-  border-bottom: 4px solid var(--HB_Color_HeaderText) !important;
-  border-radius: 0 !important;
-  box-shadow: 1px 4px 14px rgba(0, 0, 0, 0.3) !important;
-  margin: 20px 0 !important;
-}
-
-.dnd-style .callout[data-callout="statblock"] .callout-title,
-.dnd-style .callout[data-callout="monster"] .callout-title {
-  font-family: 'Cinzel', serif !important;
-  font-size: 1.6em !important;
-  padding: 10px 14px 5px !important;
-  background: transparent !important;
-  border-bottom: none !important;
-  color: var(--HB_Color_HeaderText) !important;
-}
-
-.dnd-style .callout[data-callout="statblock"] .callout-title-inner,
-.dnd-style .callout[data-callout="monster"] .callout-title-inner {
-  color: var(--HB_Color_HeaderText) !important;
-  font-weight: 700 !important;
-}
-
-.dnd-style .callout[data-callout="statblock"] .callout-icon,
-.dnd-style .callout[data-callout="monster"] .callout-icon {
-  display: none !important;
-}
-
-.dnd-style .callout[data-callout="statblock"] .callout-content,
-.dnd-style .callout[data-callout="monster"] .callout-content {
-  padding: 0 14px 14px !important;
-  line-height: 1.2em !important;
-}
-
-.dnd-style .callout[data-callout="statblock"] .callout-content *,
-.dnd-style .callout[data-callout="monster"] .callout-content * {
-  color: var(--HB_Color_Text) !important;
-}
-
-.dnd-style .callout[data-callout="statblock"] .callout-content p,
-.dnd-style .callout[data-callout="monster"] .callout-content p {
-  text-indent: 0 !important;
-  margin: 0.2em 0 !important;
-}
-
-.dnd-style .callout[data-callout="statblock"] .callout-content strong,
-.dnd-style .callout[data-callout="monster"] .callout-content strong {
-  color: var(--HB_Color_HeaderText) !important;
-  font-weight: 800 !important;
-}
-
-.dnd-style .callout[data-callout="statblock"] .callout-content em,
-.dnd-style .callout[data-callout="monster"] .callout-content em {
-  font-style: italic !important;
-}
-
-.dnd-style .callout[data-callout="statblock"] .callout-content h3,
-.dnd-style .callout[data-callout="monster"] .callout-content h3 {
-  font-family: 'Source Sans Pro', sans-serif !important;
-  font-variant: small-caps !important;
-  font-size: 1.2em !important;
-  border-bottom: 1.5px solid var(--HB_Color_HeaderText) !important;
-  margin-top: 0.5em !important;
-  color: var(--HB_Color_HeaderText) !important;
-}
-
-.dnd-style .callout[data-callout="statblock"] .callout-content hr,
-.dnd-style .callout[data-callout="monster"] .callout-content hr {
-  height: 6px !important;
-  margin: 8px 0 !important;
-  background: linear-gradient(to right, 
-    var(--HB_Color_HorizontalRule) 0%, 
-    var(--HB_Color_HorizontalRule) 100%) !important;
-  border: none !important;
-}
-
-/* Редакторский режим для callouts */
-.dnd-style.markdown-source-view .callout .cm-line,
-.dnd-style.markdown-source-view .callout .cm-line span {
-  color: var(--HB_Color_Text) !important;
-}
-
-.dnd-style.markdown-source-view .callout .cm-strong {
-  color: var(--HB_Color_HeaderText) !important;
-}
-
-/* ============================================ */
-/* ===== CALLOUTS — WARNING/DM ===== */
-/* ============================================ */
-
-.dnd-style .callout[data-callout="warning"],
-.dnd-style .callout[data-callout="dm"] {
-  font-family: 'Source Sans Pro', sans-serif !important;
-  background: linear-gradient(135deg, #FFF5DC 0%, #F5E5B8 100%) !important;
-  border: 1px dashed var(--HB_Color_HeaderUnderline) !important;
-  border-radius: 0 !important;
-}
-
-.dnd-style .callout[data-callout="warning"] .callout-content *,
-.dnd-style .callout[data-callout="dm"] .callout-content * {
-  color: var(--HB_Color_Text) !important;
-}
-
-/* ============================================ */
-/* ===== ИЗОБРАЖЕНИЯ ===== */
-/* ============================================ */
-
-.dnd-style.markdown-preview-view img,
-.dnd-style.markdown-reading-view img,
-.dnd-style.markdown-source-view img {
-  z-index: -1 !important;
-  max-width: 100% !important;
-}
-
-/* ============================================ */
-/* ===== PROPERTIES (скрыть) ===== */
-/* ============================================ */
-
-.dnd-style .frontmatter-container,
-.dnd-style .metadata-container {
-  display: none !important;
-}
-
-/* ============================================ */
-/* ===== ВЫДЕЛЕНИЕ ТЕКСТА ===== */
-/* ============================================ */
-
-.dnd-style ::selection,
-.dnd-style.markdown-source-view .cm-selectionBackground,
-.dnd-style.markdown-source-view .cm-focused .cm-selectionBackground {
-  background: rgba(201, 173, 106, 0.4) !important;
-  color: var(--HB_Color_Text) !important;
-}
-
-/* ============================================ */
-/* ===== СКРОЛЛБАР ===== */
-/* ============================================ */
-
-.dnd-style::-webkit-scrollbar {
-  width: 12px !important;
-}
-
-.dnd-style::-webkit-scrollbar-track {
-  background: #D8CEB8 !important;
-}
-
-.dnd-style::-webkit-scrollbar-thumb {
-  background: var(--HB_Color_Footnotes) !important;
-  border-radius: 6px !important;
-}
-
-.dnd-style::-webkit-scrollbar-thumb:hover {
-  background: var(--HB_Color_HeaderText) !important;
-}
+  padding: 0 1.5px !important;
