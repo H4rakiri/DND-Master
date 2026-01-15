@@ -1,81 +1,66 @@
 /* D&D Homebrewery Style для Obsidian */
+/* Адаптация оригинального CSS Homebrewery */
 /* cssclasses: dnd-style */
-/* ФИНАЛЬНАЯ ВЕРСИЯ */
 
-/* === Импорт шрифтов === */
+/* === Импорт шрифтов (замена Homebrewery шрифтов) === */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 /* ============================================ */
-/* ===== ПЕРЕОПРЕДЕЛЕНИЕ ПЕРЕМЕННЫХ ТЕМЫ ===== */
+/* ===== ПЕРЕМЕННЫЕ (из Homebrewery) ===== */
 /* ============================================ */
 
 .dnd-style,
 .dnd-style.markdown-preview-view,
 .dnd-style.markdown-reading-view,
 .dnd-style.markdown-source-view,
-.dnd-style.markdown-source-view.mod-cm6,
-.dnd-style.markdown-source-view.mod-cm6 .cm-editor,
-.dnd-style.markdown-source-view.mod-cm6 .cm-scroller {
-  --text-normal: #1D1D1B !important;
+.dnd-style.markdown-source-view.mod-cm6 .cm-editor {
+  --HB_Color_Background: #EEE5CE;
+  --HB_Color_Accent: #E0E5C1;
+  --HB_Color_HeaderUnderline: #C0AD6A;
+  --HB_Color_HorizontalRule: #9C2B1B;
+  --HB_Color_HeaderText: #58180D;
+  --HB_Color_MonsterStatBackground: #F2E5B5;
+  --HB_Color_CaptionText: #766649;
+  --HB_Color_Footnotes: #C9AD6A;
+  --HB_Color_Text: #1D1D1B;
+  
+  /* Переопределение переменных Obsidian */
+  --text-normal: var(--HB_Color_Text) !important;
   --text-muted: #3D3D3B !important;
   --text-faint: #5D5D5B !important;
-  --text-on-accent: #1D1D1B !important;
-  --text-error: #9C2B1B !important;
-  --text-selection: rgba(201, 173, 106, 0.5) !important;
-  --text-accent: #58180D !important;
-  --text-accent-hover: #9C2B1B !important;
-  --interactive-normal: #EEE5CE !important;
-  --interactive-hover: #E0D6C2 !important;
-  --interactive-accent: #C9AD6A !important;
-  --background-primary: #EEE5CE !important;
-  --background-secondary: #E0D6C2 !important;
-  --background-modifier-border: #C9AD6A !important;
-  --h1-color: #58180D !important;
-  --h2-color: #58180D !important;
-  --h3-color: #58180D !important;
-  --h4-color: #58180D !important;
-  --h5-color: #58180D !important;
-  --h6-color: #58180D !important;
-  --bold-color: #58180D !important;
-  --italic-color: #1D1D1B !important;
-  --link-color: #58180D !important;
-  --link-external-color: #58180D !important;
-  --inline-title-color: #58180D !important;
-  --list-marker-color: #58180D !important;
-  --hr-color: #9C2B1B !important;
-  --blockquote-border-color: #C9AD6A !important;
-  --tag-color: #58180D !important;
-  --tag-background: rgba(201, 173, 106, 0.25) !important;
-  --code-normal: #58180D !important;
-  --code-background: rgba(201, 173, 106, 0.25) !important;
-  --table-header-background: #E0E5C1 !important;
-  --table-row-even-background: transparent !important;
-  --table-row-odd-background: rgba(0, 0, 0, 0.04) !important;
-  --callout-default: #FDF1DC !important;
+  --text-accent: var(--HB_Color_HeaderText) !important;
+  --h1-color: var(--HB_Color_HeaderText) !important;
+  --h2-color: var(--HB_Color_HeaderText) !important;
+  --h3-color: var(--HB_Color_HeaderText) !important;
+  --h4-color: var(--HB_Color_HeaderText) !important;
+  --h5-color: var(--HB_Color_HeaderText) !important;
+  --h6-color: var(--HB_Color_HeaderText) !important;
+  --bold-color: var(--HB_Color_HeaderText) !important;
+  --italic-color: var(--HB_Color_Text) !important;
+  --link-color: var(--HB_Color_HeaderText) !important;
+  --inline-title-color: var(--HB_Color_HeaderText) !important;
+  --hr-color: var(--HB_Color_HorizontalRule) !important;
+  --blockquote-border-color: var(--HB_Color_HeaderUnderline) !important;
 }
 
 /* ============================================ */
-/* ===== КАРЕТКА (КУРСОР) ===== */
+/* ===== КАРЕТКА ===== */
 /* ============================================ */
-
-.dnd-style.markdown-source-view.mod-cm6 .cm-editor,
-.dnd-style.markdown-source-view.mod-cm6 .cm-scroller,
-.dnd-style.markdown-source-view.mod-cm6 .cm-content,
-.dnd-style.markdown-source-view.mod-cm6 .cm-line {
-  caret-color: #58180D !important;
-}
 
 .dnd-style.markdown-source-view.mod-cm6 .cm-cursor,
-.dnd-style.markdown-source-view.mod-cm6 .cm-cursor-primary {
-  border-left-color: #58180D !important;
+.dnd-style.markdown-source-view.mod-cm6 .cm-cursor-primary,
+.dnd-style.markdown-source-view.mod-cm6 .cm-cursorLayer .cm-cursor {
+  border-left-color: var(--HB_Color_HeaderText) !important;
   border-left-width: 2px !important;
 }
 
-.dnd-style.markdown-source-view.mod-cm6 .cm-cursorLayer .cm-cursor {
-  border-left-color: #58180D !important;
-  background-color: #58180D !important;
+.dnd-style.markdown-source-view.mod-cm6 .cm-editor,
+.dnd-style.markdown-source-view.mod-cm6 .cm-content,
+.dnd-style.markdown-source-view.mod-cm6 .cm-line {
+  caret-color: var(--HB_Color_HeaderText) !important;
 }
 
 /* ============================================ */
@@ -85,13 +70,14 @@
 .dnd-style.markdown-preview-view,
 .dnd-style.markdown-reading-view,
 .dnd-style.markdown-source-view.mod-cm6 .cm-scroller {
-  background-color: #EEE5CE !important;
+  background-color: var(--HB_Color_Background) !important;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23d4c9a8' fill-opacity='0.12'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important;
   padding: 40px 60px !important;
+  /* BookInsanityRemake → Libre Baskerville */
   font-family: 'Libre Baskerville', Georgia, serif !important;
-  font-size: 15px !important;
-  line-height: 1.5 !important;
-  color: #1D1D1B !important;
+  font-size: 14px !important;
+  line-height: 1.25em !important;
+  color: var(--HB_Color_Text) !important;
 }
 
 .dnd-style.markdown-preview-view .markdown-preview-sizer,
@@ -107,99 +93,9 @@
 
 .dnd-style.markdown-source-view.mod-cm6 .cm-line {
   font-family: 'Libre Baskerville', Georgia, serif !important;
-  font-size: 15px !important;
-  line-height: 1.5 !important;
-  color: #1D1D1B !important;
-}
-
-/* ============================================ */
-/* ===== ВЕСЬ ТЕКСТ — ПРИНУДИТЕЛЬНЫЙ ЦВЕТ ===== */
-/* ============================================ */
-
-.dnd-style.markdown-preview-view,
-.dnd-style.markdown-preview-view p,
-.dnd-style.markdown-preview-view span,
-.dnd-style.markdown-preview-view div,
-.dnd-style.markdown-preview-view li,
-.dnd-style.markdown-preview-view td,
-.dnd-style.markdown-preview-view label,
-.dnd-style.markdown-reading-view,
-.dnd-style.markdown-reading-view p,
-.dnd-style.markdown-reading-view span,
-.dnd-style.markdown-reading-view div,
-.dnd-style.markdown-reading-view li,
-.dnd-style.markdown-reading-view td,
-.dnd-style.markdown-reading-view label,
-.dnd-style.markdown-source-view .cm-line,
-.dnd-style.markdown-source-view .cm-line span {
-  color: #1D1D1B !important;
-}
-
-/* ============================================ */
-/* ===== ЗАГОЛОВКИ ===== */
-/* ============================================ */
-
-.dnd-style.markdown-preview-view h1,
-.dnd-style.markdown-preview-view h2,
-.dnd-style.markdown-preview-view h3,
-.dnd-style.markdown-preview-view h4,
-.dnd-style.markdown-preview-view h5,
-.dnd-style.markdown-preview-view h6,
-.dnd-style.markdown-reading-view h1,
-.dnd-style.markdown-reading-view h2,
-.dnd-style.markdown-reading-view h3,
-.dnd-style.markdown-reading-view h4,
-.dnd-style.markdown-reading-view h5,
-.dnd-style.markdown-reading-view h6,
-.dnd-style.markdown-source-view .cm-header,
-.dnd-style.markdown-source-view .HyperMD-header .cm-header {
-  font-family: 'Cinzel', 'Palatino Linotype', serif !important;
-  color: #58180D !important;
-  font-weight: 700 !important;
-}
-
-/* H1 */
-.dnd-style.markdown-preview-view h1,
-.dnd-style.markdown-reading-view h1,
-.dnd-style.markdown-source-view .HyperMD-header-1 .cm-header,
-.dnd-style.markdown-source-view .cm-header-1 {
-  font-family: 'Cinzel Decorative', serif !important;
-  font-size: 2.4em !important;
-  border-bottom: 3px solid #58180D !important;
-  padding-bottom: 8px !important;
-  text-transform: uppercase !important;
-  letter-spacing: 2px !important;
-  color: #58180D !important;
-}
-
-/* H2 */
-.dnd-style.markdown-preview-view h2,
-.dnd-style.markdown-reading-view h2,
-.dnd-style.markdown-source-view .HyperMD-header-2 .cm-header,
-.dnd-style.markdown-source-view .cm-header-2 {
-  font-size: 1.8em !important;
-  border-bottom: 2px solid #9C2B1B !important;
-  color: #58180D !important;
-}
-
-/* H3 */
-.dnd-style.markdown-preview-view h3,
-.dnd-style.markdown-reading-view h3,
-.dnd-style.markdown-source-view .HyperMD-header-3 .cm-header,
-.dnd-style.markdown-source-view .cm-header-3 {
-  font-size: 1.4em !important;
-  border-bottom: 1px solid #C9AD6A !important;
-  color: #58180D !important;
-}
-
-/* H4 */
-.dnd-style.markdown-preview-view h4,
-.dnd-style.markdown-reading-view h4,
-.dnd-style.markdown-source-view .HyperMD-header-4 .cm-header,
-.dnd-style.markdown-source-view .cm-header-4 {
-  font-size: 1.2em !important;
-  font-style: italic !important;
-  color: #58180D !important;
+  font-size: 14px !important;
+  line-height: 1.25em !important;
+  color: var(--HB_Color_Text) !important;
 }
 
 /* ============================================ */
@@ -208,32 +104,114 @@
 
 .dnd-style.markdown-preview-view p,
 .dnd-style.markdown-reading-view p {
-  text-align: justify !important;
-  text-indent: 1.2em !important;
-  margin: 0 0 0.6em 0 !important;
-  color: #1D1D1B !important;
+  line-height: 1.25em !important;
+  margin: 0 0 0.5em 0 !important;
+  color: var(--HB_Color_Text) !important;
+}
+
+.dnd-style.markdown-preview-view p + p,
+.dnd-style.markdown-reading-view p + p,
+.dnd-style.markdown-preview-view ul + p,
+.dnd-style.markdown-reading-view ul + p,
+.dnd-style.markdown-preview-view ol + p,
+.dnd-style.markdown-reading-view ol + p {
+  text-indent: 1em !important;
+}
+
+/* ============================================ */
+/* ===== ЗАГОЛОВКИ (MrEavesRemake → Cinzel) ===== */
+/* ============================================ */
+
+.dnd-style.markdown-preview-view h1,
+.dnd-style.markdown-preview-view h2,
+.dnd-style.markdown-preview-view h3,
+.dnd-style.markdown-preview-view h4,
+.dnd-style.markdown-reading-view h1,
+.dnd-style.markdown-reading-view h2,
+.dnd-style.markdown-reading-view h3,
+.dnd-style.markdown-reading-view h4,
+.dnd-style.markdown-source-view .cm-header {
+  font-family: 'Cinzel', 'Palatino Linotype', serif !important;
+  color: var(--HB_Color_HeaderText) !important;
+  font-weight: 700 !important;
+}
+
+/* H1 */
+.dnd-style.markdown-preview-view h1,
+.dnd-style.markdown-reading-view h1,
+.dnd-style.markdown-source-view .cm-header-1 {
+  font-size: 2.2em !important;
+  line-height: 1em !important;
+  margin-bottom: 0.5em !important;
+  color: var(--HB_Color_HeaderText) !important;
+}
+
+/* Буквица после H1 (SolberaImitationRemake → Cinzel Decorative) */
+.dnd-style.markdown-preview-view h1 + p::first-letter,
+.dnd-style.markdown-reading-view h1 + p::first-letter {
+  float: left !important;
+  padding-bottom: 2px !important;
+  padding-right: 8px !important;
+  margin-top: -0.1em !important;
+  font-family: 'Cinzel Decorative', serif !important;
+  font-size: 3.5em !important;
+  line-height: 0.8em !important;
+  color: var(--HB_Color_HeaderText) !important;
+  font-weight: 700 !important;
+}
+
+/* Первая строка после H1 — капитель */
+.dnd-style.markdown-preview-view h1 + p::first-line,
+.dnd-style.markdown-reading-view h1 + p::first-line {
+  font-variant: small-caps !important;
 }
 
 .dnd-style.markdown-preview-view h1 + p,
-.dnd-style.markdown-preview-view h2 + p,
-.dnd-style.markdown-preview-view h3 + p,
-.dnd-style.markdown-reading-view h1 + p,
-.dnd-style.markdown-reading-view h2 + p,
-.dnd-style.markdown-reading-view h3 + p {
+.dnd-style.markdown-reading-view h1 + p {
   text-indent: 0 !important;
 }
 
-/* Буквица */
-.dnd-style.markdown-preview-view h1 + p::first-letter,
-.dnd-style.markdown-reading-view h1 + p::first-letter {
-  font-family: 'Cinzel Decorative', serif !important;
-  float: left !important;
-  font-size: 3.5em !important;
-  line-height: 0.8 !important;
-  padding-right: 8px !important;
-  padding-top: 4px !important;
-  color: #58180D !important;
-  font-weight: 700 !important;
+/* H2 */
+.dnd-style.markdown-preview-view h2,
+.dnd-style.markdown-reading-view h2,
+.dnd-style.markdown-source-view .cm-header-2 {
+  font-size: 1.7em !important;
+  line-height: 1em !important;
+  margin-top: 0.8em !important;
+  color: var(--HB_Color_HeaderText) !important;
+}
+
+/* H3 */
+.dnd-style.markdown-preview-view h3,
+.dnd-style.markdown-reading-view h3,
+.dnd-style.markdown-source-view .cm-header-3 {
+  font-size: 1.4em !important;
+  line-height: 1em !important;
+  border-bottom: 2px solid var(--HB_Color_HeaderUnderline) !important;
+  padding-bottom: 2px !important;
+  margin-top: 0.6em !important;
+  color: var(--HB_Color_HeaderText) !important;
+}
+
+/* H4 */
+.dnd-style.markdown-preview-view h4,
+.dnd-style.markdown-reading-view h4,
+.dnd-style.markdown-source-view .cm-header-4 {
+  font-size: 1.15em !important;
+  line-height: 1em !important;
+  margin-top: 0.5em !important;
+  color: var(--HB_Color_HeaderText) !important;
+}
+
+/* H5 (ScalySansSmallCapsRemake) */
+.dnd-style.markdown-preview-view h5,
+.dnd-style.markdown-reading-view h5,
+.dnd-style.markdown-source-view .cm-header-5 {
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 1em !important;
+  font-variant: small-caps !important;
+  letter-spacing: 0.05em !important;
+  color: var(--HB_Color_HeaderText) !important;
 }
 
 /* ============================================ */
@@ -244,21 +222,21 @@
 .dnd-style.markdown-preview-view ol,
 .dnd-style.markdown-reading-view ul,
 .dnd-style.markdown-reading-view ol {
-  padding-left: 1.8em !important;
-  margin: 0.6em 0 !important;
+  padding-left: 1.4em !important;
+  margin-bottom: 0.8em !important;
+  line-height: 1.25em !important;
 }
 
 .dnd-style.markdown-preview-view li,
 .dnd-style.markdown-reading-view li,
 .dnd-style.markdown-source-view .HyperMD-list-line {
-  margin-bottom: 0.4em !important;
-  color: #1D1D1B !important;
+  color: var(--HB_Color_Text) !important;
 }
 
 .dnd-style.markdown-preview-view li::marker,
 .dnd-style.markdown-reading-view li::marker,
 .dnd-style.markdown-source-view .cm-formatting-list {
-  color: #58180D !important;
+  color: var(--HB_Color_HeaderText) !important;
 }
 
 /* ============================================ */
@@ -266,20 +244,17 @@
 /* ============================================ */
 
 .dnd-style.markdown-preview-view strong,
-.dnd-style.markdown-preview-view b,
 .dnd-style.markdown-reading-view strong,
-.dnd-style.markdown-reading-view b,
 .dnd-style.markdown-source-view .cm-strong {
-  color: #58180D !important;
-  font-weight: 700 !important;
+  font-weight: bold !important;
+  letter-spacing: -0.02em !important;
+  color: var(--HB_Color_HeaderText) !important;
 }
 
 .dnd-style.markdown-preview-view em,
-.dnd-style.markdown-preview-view i,
 .dnd-style.markdown-reading-view em,
-.dnd-style.markdown-reading-view i,
 .dnd-style.markdown-source-view .cm-em {
-  color: #1D1D1B !important;
+  color: var(--HB_Color_Text) !important;
 }
 
 /* ============================================ */
@@ -289,12 +264,53 @@
 .dnd-style.markdown-preview-view a,
 .dnd-style.markdown-reading-view a,
 .dnd-style.markdown-source-view .cm-link,
-.dnd-style.markdown-source-view .cm-url,
-.dnd-style.markdown-source-view .cm-hmd-internal-link,
-.dnd-style.markdown-source-view .cm-underline {
-  color: #58180D !important;
+.dnd-style.markdown-source-view .cm-hmd-internal-link {
+  color: var(--HB_Color_HeaderText) !important;
   text-decoration: underline !important;
-  text-decoration-color: #C9AD6A !important;
+  text-decoration-color: var(--HB_Color_HeaderUnderline) !important;
+}
+
+/* ============================================ */
+/* ===== ТАБЛИЦЫ (ScalySansRemake) ===== */
+/* ============================================ */
+
+.dnd-style.markdown-preview-view table,
+.dnd-style.markdown-reading-view table {
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 13px !important;
+  line-height: 1.2em !important;
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 15px 0 !important;
+}
+
+.dnd-style.markdown-preview-view thead,
+.dnd-style.markdown-reading-view thead {
+  font-weight: 800 !important;
+}
+
+.dnd-style.markdown-preview-view th,
+.dnd-style.markdown-reading-view th {
+  padding: 4px 6px !important;
+  vertical-align: bottom !important;
+  color: var(--HB_Color_HeaderText) !important;
+  font-weight: 800 !important;
+}
+
+.dnd-style.markdown-preview-view td,
+.dnd-style.markdown-reading-view td {
+  padding: 4px 6px !important;
+  color: var(--HB_Color_Text) !important;
+}
+
+.dnd-style.markdown-preview-view tbody tr:nth-child(odd),
+.dnd-style.markdown-reading-view tbody tr:nth-child(odd) {
+  background-color: var(--HB_Color_Accent) !important;
+}
+
+.dnd-style.markdown-source-view .HyperMD-table-row,
+.dnd-style.markdown-source-view .cm-hmd-table-sep {
+  color: var(--HB_Color_Text) !important;
 }
 
 /* ============================================ */
@@ -304,262 +320,293 @@
 .dnd-style.markdown-preview-view hr,
 .dnd-style.markdown-reading-view hr,
 .dnd-style.markdown-source-view hr {
+  visibility: visible !important;
   border: none !important;
-  height: 4px !important;
-  background: linear-gradient(to right, transparent 0%, #9C2B1B 20%, #9C2B1B 80%, transparent 100%) !important;
-  margin: 25px 0 !important;
+  height: 6px !important;
+  margin: 15px 0 !important;
+  background: linear-gradient(to right, 
+    transparent 0%, 
+    var(--HB_Color_HorizontalRule) 15%, 
+    var(--HB_Color_HorizontalRule) 85%, 
+    transparent 100%) !important;
 }
 
 /* ============================================ */
-/* ===== ЦИТАТЫ ===== */
+/* ===== ЦИТАТЫ (.quote) ===== */
 /* ============================================ */
 
 .dnd-style.markdown-preview-view blockquote,
 .dnd-style.markdown-reading-view blockquote {
-  background-color: #F8F4E8 !important;
-  border-left: 4px solid #C9AD6A !important;
-  border-top: 1px solid rgba(0, 0, 0, 0.12) !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
-  border-right: none !important;
-  padding: 14px 18px !important;
-  margin: 20px 0 !important;
   font-style: italic !important;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.08) !important;
+  line-height: 1.4em !important;
+  padding: 10px 15px !important;
+  margin: 15px 0 !important;
+  border-left: 4px solid var(--HB_Color_HeaderUnderline) !important;
+  background-color: rgba(0, 0, 0, 0.02) !important;
+}
+
+.dnd-style.markdown-preview-view blockquote p:first-child::first-line,
+.dnd-style.markdown-reading-view blockquote p:first-child::first-line {
+  font-size: 1.1em !important;
+  font-style: normal !important;
+  font-variant: small-caps !important;
 }
 
 .dnd-style.markdown-preview-view blockquote,
 .dnd-style.markdown-preview-view blockquote *,
 .dnd-style.markdown-reading-view blockquote,
 .dnd-style.markdown-reading-view blockquote * {
-  color: #1D1D1B !important;
+  color: var(--HB_Color_Text) !important;
 }
 
 .dnd-style.markdown-preview-view blockquote strong,
 .dnd-style.markdown-reading-view blockquote strong {
-  color: #58180D !important;
+  color: var(--HB_Color_HeaderText) !important;
 }
 
 .dnd-style.markdown-preview-view blockquote p,
 .dnd-style.markdown-reading-view blockquote p {
   text-indent: 0 !important;
-  margin: 0.4em 0 !important;
+  margin: 0.3em 0 !important;
 }
 
 .dnd-style.markdown-source-view .HyperMD-quote {
-  background-color: #F8F4E8 !important;
-  border-left: 4px solid #C9AD6A !important;
-  padding: 4px 12px !important;
-  color: #1D1D1B !important;
+  border-left: 4px solid var(--HB_Color_HeaderUnderline) !important;
+  padding-left: 12px !important;
+  color: var(--HB_Color_Text) !important;
   font-style: italic !important;
-}
-
-.dnd-style.markdown-source-view .HyperMD-quote .cm-line,
-.dnd-style.markdown-source-view .HyperMD-quote span {
-  color: #1D1D1B !important;
-}
-
-.dnd-style.markdown-source-view .cm-formatting-quote {
-  color: #C9AD6A !important;
-}
-
-/* ============================================ */
-/* ===== ТАБЛИЦЫ ===== */
-/* ============================================ */
-
-.dnd-style.markdown-preview-view table,
-.dnd-style.markdown-reading-view table {
-  width: 100% !important;
-  border-collapse: collapse !important;
-  margin: 20px 0 !important;
-}
-
-.dnd-style.markdown-preview-view thead,
-.dnd-style.markdown-reading-view thead {
-  background-color: #E0E5C1 !important;
-  border-bottom: 2px solid #58180D !important;
-}
-
-.dnd-style.markdown-preview-view th,
-.dnd-style.markdown-reading-view th {
-  font-family: 'Cinzel', serif !important;
-  font-weight: 700 !important;
-  color: #58180D !important;
-  padding: 10px 12px !important;
-}
-
-.dnd-style.markdown-preview-view td,
-.dnd-style.markdown-reading-view td {
-  padding: 8px 12px !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-  color: #1D1D1B !important;
-}
-
-.dnd-style.markdown-preview-view tr:nth-child(odd),
-.dnd-style.markdown-reading-view tr:nth-child(odd) {
-  background-color: rgba(0, 0, 0, 0.04) !important;
-}
-
-.dnd-style.markdown-source-view .HyperMD-table-row,
-.dnd-style.markdown-source-view .cm-hmd-table-sep {
-  color: #1D1D1B !important;
-}
-
-/* ============================================ */
-/* ===== CALLOUTS ===== */
-/* ============================================ */
-
-.dnd-style .callout {
-  background: linear-gradient(135deg, #FDF1DC 0%, #F5E6C8 100%) !important;
-  border: 2px solid #C9AD6A !important;
-  border-radius: 0 !important;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.12) !important;
-  padding: 0 !important;
-  margin: 20px 0 !important;
-}
-
-.dnd-style .callout .callout-title {
-  font-family: 'Cinzel', serif !important;
-  font-weight: 700 !important;
-  font-size: 1.15em !important;
-  border-bottom: 2px solid #9C2B1B !important;
-  padding: 12px 16px !important;
-  margin: 0 !important;
-  background: rgba(255, 255, 255, 0.3) !important;
-  color: #58180D !important;
-}
-
-.dnd-style .callout .callout-title .callout-title-inner {
-  color: #58180D !important;
-  font-weight: 700 !important;
-}
-
-.dnd-style .callout .callout-icon,
-.dnd-style .callout .callout-icon svg,
-.dnd-style .callout .callout-icon svg path {
-  color: #58180D !important;
-  stroke: #58180D !important;
-  fill: #58180D !important;
-}
-
-.dnd-style .callout .callout-content {
-  padding: 12px 16px !important;
-  background: transparent !important;
-}
-
-.dnd-style .callout .callout-content,
-.dnd-style .callout .callout-content * {
-  color: #1D1D1B !important;
-}
-
-.dnd-style .callout .callout-content p {
-  text-indent: 0 !important;
-  margin: 0.4em 0 !important;
-}
-
-.dnd-style .callout .callout-content strong,
-.dnd-style .callout .callout-content b {
-  color: #58180D !important;
-}
-
-/* В режиме редактирования */
-.dnd-style.markdown-source-view .callout .cm-line,
-.dnd-style.markdown-source-view .callout .cm-line span {
-  color: #1D1D1B !important;
-}
-
-.dnd-style.markdown-source-view .callout .cm-strong {
-  color: #58180D !important;
-}
-
-/* ============================================ */
-/* ===== STATBLOCK ===== */
-/* ============================================ */
-
-.dnd-style .callout[data-callout="statblock"] {
-  background: linear-gradient(to bottom, #FDF1DC 0%, #F8E4B8 50%, #F0DAA5 100%) !important;
-  border: none !important;
-  border-top: 5px solid #58180D !important;
-  border-bottom: 5px solid #58180D !important;
-  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.06), 0 3px 10px rgba(0, 0, 0, 0.15) !important;
-}
-
-.dnd-style .callout[data-callout="statblock"] .callout-title {
-  font-size: 1.5em !important;
-  letter-spacing: 1px !important;
-  border-bottom: 2px solid #58180D !important;
-  padding: 14px 18px !important;
-  background: transparent !important;
-  color: #58180D !important;
-}
-
-.dnd-style .callout[data-callout="statblock"] .callout-title .callout-title-inner {
-  color: #58180D !important;
-}
-
-.dnd-style .callout[data-callout="statblock"] .callout-content,
-.dnd-style .callout[data-callout="statblock"] .callout-content * {
-  color: #1D1D1B !important;
-}
-
-.dnd-style .callout[data-callout="statblock"] .callout-content strong {
-  color: #58180D !important;
-}
-
-/* ============================================ */
-/* ===== READ / READALOUD ===== */
-/* ============================================ */
-
-.dnd-style .callout[data-callout="read"],
-.dnd-style .callout[data-callout="readaloud"] {
-  background: linear-gradient(135deg, #E8E8E8 0%, #DEDEDE 100%) !important;
-  border: none !important;
-  border-left: 5px solid #58180D !important;
-}
-
-.dnd-style .callout[data-callout="read"] .callout-title,
-.dnd-style .callout[data-callout="readaloud"] .callout-title {
-  display: none !important;
-}
-
-.dnd-style .callout[data-callout="read"] .callout-content *,
-.dnd-style .callout[data-callout="readaloud"] .callout-content * {
-  color: #1D1D1B !important;
-  font-style: italic !important;
-}
-
-/* ============================================ */
-/* ===== NOTE / DM ===== */
-/* ============================================ */
-
-.dnd-style .callout[data-callout="note"],
-.dnd-style .callout[data-callout="dm"] {
-  background: linear-gradient(135deg, #FFF8DC 0%, #F5EBC8 100%) !important;
-  border: 1px dashed #C9AD6A !important;
 }
 
 /* ============================================ */
 /* ===== КОД ===== */
 /* ============================================ */
 
-.dnd-style code,
-.dnd-style .cm-inline-code {
-  background-color: rgba(201, 173, 106, 0.25) !important;
+.dnd-style.markdown-preview-view code,
+.dnd-style.markdown-reading-view code,
+.dnd-style.markdown-source-view .cm-inline-code {
   padding: 2px 6px !important;
-  border-radius: 3px !important;
-  font-family: 'Courier New', monospace !important;
   font-size: 0.9em !important;
-  color: #58180D !important;
+  color: var(--HB_Color_HeaderText) !important;
+  background-color: #FAF7EA !important;
+  border-radius: 4px !important;
+}
+
+/* ============================================ */
+/* ===== CALLOUTS — NOTE (.note) ===== */
+/* ============================================ */
+
+.dnd-style .callout[data-callout="note"],
+.dnd-style .callout[data-callout="info"] {
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 13px !important;
+  padding: 0 !important;
+  background-color: var(--HB_Color_Accent) !important;
+  border: 1px solid #9C7B50 !important;
+  border-radius: 0 !important;
+  box-shadow: 1px 4px 14px rgba(0, 0, 0, 0.3) !important;
+  margin: 15px 0 !important;
+}
+
+.dnd-style .callout[data-callout="note"] .callout-title,
+.dnd-style .callout[data-callout="info"] .callout-title {
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-variant: small-caps !important;
+  font-size: 1.1em !important;
+  padding: 8px 12px !important;
+  background: transparent !important;
+  border-bottom: none !important;
+  color: var(--HB_Color_HeaderText) !important;
+}
+
+.dnd-style .callout[data-callout="note"] .callout-title-inner,
+.dnd-style .callout[data-callout="info"] .callout-title-inner {
+  color: var(--HB_Color_HeaderText) !important;
+  font-weight: 700 !important;
+}
+
+.dnd-style .callout[data-callout="note"] .callout-content,
+.dnd-style .callout[data-callout="info"] .callout-content {
+  padding: 8px 12px !important;
+  line-height: 1.2em !important;
+}
+
+.dnd-style .callout[data-callout="note"] .callout-content *,
+.dnd-style .callout[data-callout="info"] .callout-content * {
+  color: var(--HB_Color_Text) !important;
+}
+
+.dnd-style .callout[data-callout="note"] .callout-content p,
+.dnd-style .callout[data-callout="info"] .callout-content p {
+  text-indent: 0 !important;
+  margin: 0.3em 0 !important;
+}
+
+/* ============================================ */
+/* ===== CALLOUTS — DESCRIPTIVE (.descriptive) / READ-ALOUD ===== */
+/* ============================================ */
+
+.dnd-style .callout[data-callout="read"],
+.dnd-style .callout[data-callout="readaloud"],
+.dnd-style .callout[data-callout="descriptive"] {
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 13px !important;
+  padding: 0 !important;
+  background-color: #FAF7EA !important;
+  border: 2px solid #C9AD6A !important;
+  border-radius: 0 !important;
+  box-shadow: 0 0 6px #FAF7EA !important;
+  margin: 15px 0 !important;
+}
+
+.dnd-style .callout[data-callout="read"] .callout-title,
+.dnd-style .callout[data-callout="readaloud"] .callout-title,
+.dnd-style .callout[data-callout="descriptive"] .callout-title {
+  display: none !important;
+}
+
+.dnd-style .callout[data-callout="read"] .callout-content,
+.dnd-style .callout[data-callout="readaloud"] .callout-content,
+.dnd-style .callout[data-callout="descriptive"] .callout-content {
+  padding: 10px 14px !important;
+  line-height: 1.5em !important;
+}
+
+.dnd-style .callout[data-callout="read"] .callout-content *,
+.dnd-style .callout[data-callout="readaloud"] .callout-content *,
+.dnd-style .callout[data-callout="descriptive"] .callout-content * {
+  color: var(--HB_Color_Text) !important;
+}
+
+.dnd-style .callout[data-callout="read"] .callout-content p,
+.dnd-style .callout[data-callout="readaloud"] .callout-content p,
+.dnd-style .callout[data-callout="descriptive"] .callout-content p {
+  text-indent: 0 !important;
+  margin: 0.3em 0 !important;
+}
+
+/* ============================================ */
+/* ===== CALLOUTS — MONSTER / STATBLOCK ===== */
+/* ============================================ */
+
+.dnd-style .callout[data-callout="statblock"],
+.dnd-style .callout[data-callout="monster"] {
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 13px !important;
+  padding: 0 !important;
+  background-color: var(--HB_Color_MonsterStatBackground) !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23d4c9a8' fill-opacity='0.15'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important;
+  border: none !important;
+  border-top: 4px solid var(--HB_Color_HeaderText) !important;
+  border-bottom: 4px solid var(--HB_Color_HeaderText) !important;
+  border-radius: 0 !important;
+  box-shadow: 1px 4px 14px rgba(0, 0, 0, 0.3) !important;
+  margin: 20px 0 !important;
+}
+
+.dnd-style .callout[data-callout="statblock"] .callout-title,
+.dnd-style .callout[data-callout="monster"] .callout-title {
+  font-family: 'Cinzel', serif !important;
+  font-size: 1.6em !important;
+  padding: 10px 14px 5px !important;
+  background: transparent !important;
+  border-bottom: none !important;
+  color: var(--HB_Color_HeaderText) !important;
+}
+
+.dnd-style .callout[data-callout="statblock"] .callout-title-inner,
+.dnd-style .callout[data-callout="monster"] .callout-title-inner {
+  color: var(--HB_Color_HeaderText) !important;
+  font-weight: 700 !important;
+}
+
+.dnd-style .callout[data-callout="statblock"] .callout-icon,
+.dnd-style .callout[data-callout="monster"] .callout-icon {
+  display: none !important;
+}
+
+.dnd-style .callout[data-callout="statblock"] .callout-content,
+.dnd-style .callout[data-callout="monster"] .callout-content {
+  padding: 0 14px 14px !important;
+  line-height: 1.2em !important;
+}
+
+.dnd-style .callout[data-callout="statblock"] .callout-content *,
+.dnd-style .callout[data-callout="monster"] .callout-content * {
+  color: var(--HB_Color_Text) !important;
+}
+
+.dnd-style .callout[data-callout="statblock"] .callout-content p,
+.dnd-style .callout[data-callout="monster"] .callout-content p {
+  text-indent: 0 !important;
+  margin: 0.2em 0 !important;
+}
+
+.dnd-style .callout[data-callout="statblock"] .callout-content strong,
+.dnd-style .callout[data-callout="monster"] .callout-content strong {
+  color: var(--HB_Color_HeaderText) !important;
+  font-weight: 800 !important;
+}
+
+.dnd-style .callout[data-callout="statblock"] .callout-content em,
+.dnd-style .callout[data-callout="monster"] .callout-content em {
+  font-style: italic !important;
+}
+
+.dnd-style .callout[data-callout="statblock"] .callout-content h3,
+.dnd-style .callout[data-callout="monster"] .callout-content h3 {
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-variant: small-caps !important;
+  font-size: 1.2em !important;
+  border-bottom: 1.5px solid var(--HB_Color_HeaderText) !important;
+  margin-top: 0.5em !important;
+  color: var(--HB_Color_HeaderText) !important;
+}
+
+.dnd-style .callout[data-callout="statblock"] .callout-content hr,
+.dnd-style .callout[data-callout="monster"] .callout-content hr {
+  height: 6px !important;
+  margin: 8px 0 !important;
+  background: linear-gradient(to right, 
+    var(--HB_Color_HorizontalRule) 0%, 
+    var(--HB_Color_HorizontalRule) 100%) !important;
+  border: none !important;
+}
+
+/* Редакторский режим для callouts */
+.dnd-style.markdown-source-view .callout .cm-line,
+.dnd-style.markdown-source-view .callout .cm-line span {
+  color: var(--HB_Color_Text) !important;
+}
+
+.dnd-style.markdown-source-view .callout .cm-strong {
+  color: var(--HB_Color_HeaderText) !important;
+}
+
+/* ============================================ */
+/* ===== CALLOUTS — WARNING/DM ===== */
+/* ============================================ */
+
+.dnd-style .callout[data-callout="warning"],
+.dnd-style .callout[data-callout="dm"] {
+  font-family: 'Source Sans Pro', sans-serif !important;
+  background: linear-gradient(135deg, #FFF5DC 0%, #F5E5B8 100%) !important;
+  border: 1px dashed var(--HB_Color_HeaderUnderline) !important;
+  border-radius: 0 !important;
+}
+
+.dnd-style .callout[data-callout="warning"] .callout-content *,
+.dnd-style .callout[data-callout="dm"] .callout-content * {
+  color: var(--HB_Color_Text) !important;
 }
 
 /* ============================================ */
 /* ===== ИЗОБРАЖЕНИЯ ===== */
 /* ============================================ */
 
-.dnd-style img {
-  border: 3px solid #C9AD6A !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
-  margin: 15px auto !important;
-  display: block !important;
+.dnd-style.markdown-preview-view img,
+.dnd-style.markdown-reading-view img,
+.dnd-style.markdown-source-view img {
+  z-index: -1 !important;
   max-width: 100% !important;
 }
 
@@ -577,13 +624,10 @@
 /* ============================================ */
 
 .dnd-style ::selection,
-.dnd-style.markdown-source-view .cm-selectionBackground {
-  background: rgba(201, 173, 106, 0.5) !important;
-  color: #1D1D1B !important;
-}
-
+.dnd-style.markdown-source-view .cm-selectionBackground,
 .dnd-style.markdown-source-view .cm-focused .cm-selectionBackground {
-  background: rgba(201, 173, 106, 0.5) !important;
+  background: rgba(201, 173, 106, 0.4) !important;
+  color: var(--HB_Color_Text) !important;
 }
 
 /* ============================================ */
@@ -599,10 +643,10 @@
 }
 
 .dnd-style::-webkit-scrollbar-thumb {
-  background: #C9AD6A !important;
+  background: var(--HB_Color_Footnotes) !important;
   border-radius: 6px !important;
 }
 
 .dnd-style::-webkit-scrollbar-thumb:hover {
-  background: #58180D !important;
+  background: var(--HB_Color_HeaderText) !important;
 }
