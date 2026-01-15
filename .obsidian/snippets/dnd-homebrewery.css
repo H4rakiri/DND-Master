@@ -1,0 +1,156 @@
+/* D&D Homebrewery Style for Obsidian */
+.dnd-style {
+  --page-bg: #faf8f3;
+  --text-color: #2b2b2b;
+  --accent-color: #8b6f47;
+  --border-color: #d4a574;
+  --header-bg: #e8dcc8;
+  --column-bg: #f4ede4;
+}
+.dnd-style .markdown-preview-view,
+.dnd-style .markdown-source-view {
+  background-color: var(--page-bg) !important;
+  color: var(--text-color) !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  line-height: 1.6 !important;
+} /* Заголовки */
+.dnd-style h1 {
+  color: var(--accent-color) !important;
+  font-size: 2.4rem !important;
+  border-bottom: 3px solid var(--border-color) !important;
+  padding-bottom: 0.5rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+.dnd-style h2 {
+  color: var(--accent-color) !important;
+  font-size: 1.8rem !important;
+  border-bottom: 2px solid var(--border-color) !important;
+  padding-bottom: 0.3rem !important;
+  margin-top: 1.2rem !important;
+  margin-bottom: 0.8rem !important;
+}
+.dnd-style h3 {
+  color: var(--accent-color) !important;
+  font-size: 1.4rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0.5rem !important;
+  font-style: italic !important;
+}
+.dnd-style h4,
+.dnd-style h5,
+.dnd-style h6 {
+  color: var(--accent-color) !important;
+  margin-top: 0.8rem !important;
+} /* Основной текст */
+.dnd-style p {
+  margin-bottom: 0.8rem !important;
+  text-align: justify !important;
+} /* Списки */
+.dnd-style ul,
+.dnd-style ol {
+  margin-left: 2rem !important;
+  margin-bottom: 1rem !important;
+}
+.dnd-style li {
+  margin-bottom: 0.4rem !important;
+  line-height: 1.6 !important;
+} /* Блокквоты (для выделения важного) */
+.dnd-style blockquote {
+  border-left: 4px solid var(--border-color) !important;
+  background-color: var(--column-bg) !important;
+  padding: 1rem !important;
+  margin: 1rem 0 !important;
+  font-style: italic !important;
+  color: var(--text-color) !important;
+} /* Таблицы */
+.dnd-style table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1rem 0 !important;
+  background-color: white !important;
+}
+.dnd-style table thead {
+  background-color: var(--header-bg) !important;
+  border-bottom: 2px solid var(--border-color) !important;
+}
+.dnd-style table th {
+  padding: 0.8rem !important;
+  text-align: left !important;
+  color: var(--accent-color) !important;
+  font-weight: bold !important;
+}
+.dnd-style table td {
+  padding: 0.6rem 0.8rem !important;
+  border-bottom: 1px solid #e0d5c7 !important;
+}
+.dnd-style table tbody tr:hover {
+  background-color: var(--column-bg) !important;
+} /* Код */
+.dnd-style code {
+  background-color: #f0ebe4 !important;
+  color: #8b4513 !important;
+  padding: 0.2rem 0.4rem !important;
+  border-radius: 3px !important;
+  font-family: "Courier New", monospace !important;
+}
+.dnd-style pre {
+  background-color: #2b2b2b !important;
+  color: #d4af37 !important;
+  padding: 1rem !important;
+  border-radius: 4px !important;
+  overflow-x: auto !important;
+  border: 2px solid var(--border-color) !important;
+  margin: 1rem 0 !important;
+}
+.dnd-style pre code {
+  background-color: transparent !important;
+  color: #d4af37 !important;
+  padding: 0 !important;
+} /* Горизонтальная линия */
+.dnd-style hr {
+  border: none !important;
+  height: 3px !important;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--border-color),
+    transparent
+  ) !important;
+  margin: 2rem 0 !important;
+} /* Ссылки */
+.dnd-style a {
+  color: var(--accent-color) !important;
+  text-decoration: underline !important;
+  font-weight: 500 !important;
+}
+.dnd-style a:hover {
+  color: #a0845a !important;
+  text-decoration: none !important;
+} /* Emphasis */
+.dnd-style strong {
+  color: var(--accent-color) !important;
+  font-weight: bold !important;
+}
+.dnd-style em {
+  color: var(--accent-color) !important;
+  font-style: italic !important;
+} /* Callout блоки (если используются) */
+.dnd-style .callout {
+  background-color: var(--column-bg) !important;
+  border-left: 4px solid var(--border-color) !important;
+  padding: 1rem !important;
+  margin: 1rem 0 !important;
+  border-radius: 4px !important;
+} /* Для двухколоночного макета используйте таблицу без границ: | Левая колонка | Правая колонка | */
+.dnd-style .markdown-preview-view table {
+  border: none !important;
+}
+.dnd-style .markdown-preview-view table th,
+.dnd-style .markdown-preview-view table td {
+  border: none !important;
+  padding: 1rem !important;
+  vertical-align: top !important;
+}
