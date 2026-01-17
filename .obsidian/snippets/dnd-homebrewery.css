@@ -1,0 +1,291 @@
+/* D&D Homebrewery Style для Obsidian */
+/* Использует ресурсы напрямую с Homebrewery */
+/* cssclasses: dnd-style */
+
+/* === Импорт шрифтов === */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap');
+
+/* ============================================ */
+/* ===== ПЕРЕМЕННЫЕ ===== */
+/* ============================================ */
+
+.dnd-style {
+  --HB_Color_Background: #EEE5CE;
+  --HB_Color_Accent: #E0E5C1;
+  --HB_Color_HeaderUnderline: #C0AD6A;
+  --HB_Color_HorizontalRule: #9C2B1B;
+  --HB_Color_HeaderText: #58180D;
+  --HB_Color_MonsterStatBackground: #F2E5B5;
+  --HB_Color_CaptionText: #766649;
+  --HB_Color_Footnotes: #C9AD6A;
+  --HB_Color_Text: #1D1D1B;
+  
+  /* URL ресурсов Homebrewery */
+  --HB_Asset_Background: url('https://homebrewery.naturalcrit.com/assets/parchmentBackground.jpg');
+  --HB_Asset_BackgroundGrayscale: url('https://homebrewery.naturalcrit.com/assets/parchmentBackgroundGrayscale.jpg');
+  --HB_Asset_NoteBorder: url('https://homebrewery.naturalcrit.com/assets/noteBorder.png');
+  --HB_Asset_DescriptiveBorder: url('https://homebrewery.naturalcrit.com/assets/descriptiveBorder.png');
+  --HB_Asset_MonsterBorder: url('https://homebrewery.naturalcrit.com/assets/monsterBorderFancy.png');
+  --HB_Asset_RedTriangle: url('https://homebrewery.naturalcrit.com/assets/redTriangle.png');
+  
+  /* Переопределение переменных Obsidian */
+  --text-normal: var(--HB_Color_Text) !important;
+  --text-muted: #3D3D3B !important;
+  --text-accent: var(--HB_Color_HeaderText) !important;
+  --h1-color: var(--HB_Color_HeaderText) !important;
+  --h2-color: var(--HB_Color_HeaderText) !important;
+  --h3-color: var(--HB_Color_HeaderText) !important;
+  --h4-color: var(--HB_Color_HeaderText) !important;
+  --h5-color: var(--HB_Color_HeaderText) !important;
+  --bold-color: var(--HB_Color_HeaderText) !important;
+  --link-color: var(--HB_Color_HeaderText) !important;
+}
+
+/* ============================================ */
+/* ===== КАРЕТКА ===== */
+/* ============================================ */
+
+.dnd-style.markdown-source-view.mod-cm6 .cm-cursor,
+.dnd-style.markdown-source-view.mod-cm6 .cm-cursor-primary,
+.dnd-style.markdown-source-view.mod-cm6 .cm-cursorLayer .cm-cursor {
+  border-left-color: var(--HB_Color_HeaderText) !important;
+  border-left-width: 2px !important;
+}
+
+.dnd-style.markdown-source-view.mod-cm6 .cm-editor,
+.dnd-style.markdown-source-view.mod-cm6 .cm-content,
+.dnd-style.markdown-source-view.mod-cm6 .cm-line {
+  caret-color: var(--HB_Color_HeaderText) !important;
+}
+
+/* ============================================ */
+/* ===== ОСНОВНОЙ КОНТЕЙНЕР ===== */
+/* ============================================ */
+
+.dnd-style.markdown-preview-view,
+.dnd-style.markdown-reading-view,
+.dnd-style.markdown-source-view.mod-cm6 .cm-scroller {
+  background-color: var(--HB_Color_Background) !important;
+  background-image: var(--HB_Asset_Background) !important;
+  background-size: cover !important;
+  padding: 40px 60px !important;
+  font-family: 'Libre Baskerville', Georgia, serif !important;
+  font-size: 14px !important;
+  line-height: 1.25em !important;
+  color: var(--HB_Color_Text) !important;
+}
+
+.dnd-style.markdown-preview-view .markdown-preview-sizer,
+.dnd-style.markdown-reading-view .markdown-preview-sizer {
+  max-width: 750px !important;
+  margin: 0 auto !important;
+}
+
+.dnd-style.markdown-source-view.mod-cm6 .cm-content {
+  max-width: 750px !important;
+  margin: 0 auto !important;
+}
+
+.dnd-style.markdown-source-view.mod-cm6 .cm-line {
+  font-family: 'Libre Baskerville', Georgia, serif !important;
+  font-size: 14px !important;
+  line-height: 1.25em !important;
+  color: var(--HB_Color_Text) !important;
+}
+
+/* ============================================ */
+/* ===== ПАРАГРАФЫ ===== */
+/* ============================================ */
+
+.dnd-style.markdown-preview-view p,
+.dnd-style.markdown-reading-view p {
+  line-height: 1.25em !important;
+  margin: 0 0 0.325cm 0 !important;
+  color: var(--HB_Color_Text) !important;
+}
+
+.dnd-style.markdown-preview-view p + p,
+.dnd-style.markdown-reading-view p + p,
+.dnd-style.markdown-preview-view ul + p,
+.dnd-style.markdown-reading-view ul + p,
+.dnd-style.markdown-preview-view ol + p,
+.dnd-style.markdown-reading-view ol + p {
+  text-indent: 1em !important;
+}
+
+/* ============================================ */
+/* ===== ЗАГОЛОВКИ ===== */
+/* ============================================ */
+
+.dnd-style.markdown-preview-view h1,
+.dnd-style.markdown-preview-view h2,
+.dnd-style.markdown-preview-view h3,
+.dnd-style.markdown-preview-view h4,
+.dnd-style.markdown-reading-view h1,
+.dnd-style.markdown-reading-view h2,
+.dnd-style.markdown-reading-view h3,
+.dnd-style.markdown-reading-view h4,
+.dnd-style.markdown-source-view .cm-header {
+  font-family: 'Cinzel', 'Palatino Linotype', serif !important;
+  color: var(--HB_Color_HeaderText) !important;
+  font-weight: 700 !important;
+}
+
+/* H1 */
+.dnd-style.markdown-preview-view h1,
+.dnd-style.markdown-reading-view h1,
+.dnd-style.markdown-source-view .cm-header-1 {
+  font-size: 0.89cm !important;
+  line-height: 1em !important;
+  margin-bottom: 0.18cm !important;
+  color: var(--HB_Color_HeaderText) !important;
+}
+
+/* Буквица */
+.dnd-style.markdown-preview-view h1 + p::first-letter,
+.dnd-style.markdown-reading-view h1 + p::first-letter {
+  float: left !important;
+  padding-bottom: 2px !important;
+  padding-right: 8px !important;
+  margin-top: -0.1cm !important;
+  font-family: 'Cinzel Decorative', serif !important;
+  font-size: 3.5cm !important;
+  line-height: 1em !important;
+  color: rgba(0, 0, 0, 0) !important;
+  background-image: linear-gradient(-45deg, #322814, #998250, #322814) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+.dnd-style.markdown-preview-view h1 + p::first-line,
+.dnd-style.markdown-reading-view h1 + p::first-line {
+  font-variant: small-caps !important;
+}
+
+.dnd-style.markdown-preview-view h1 + p,
+.dnd-style.markdown-reading-view h1 + p {
+  text-indent: 0 !important;
+}
+
+/* H2 */
+.dnd-style.markdown-preview-view h2,
+.dnd-style.markdown-reading-view h2,
+.dnd-style.markdown-source-view .cm-header-2 {
+  font-size: 0.75cm !important;
+  line-height: 0.988em !important;
+  color: var(--HB_Color_HeaderText) !important;
+}
+
+/* H3 */
+.dnd-style.markdown-preview-view h3,
+.dnd-style.markdown-reading-view h3,
+.dnd-style.markdown-source-view .cm-header-3 {
+  font-size: 0.575cm !important;
+  line-height: 0.995em !important;
+  border-bottom: 2px solid var(--HB_Color_HeaderUnderline) !important;
+  margin-top: 0.17cm !important;
+  color: var(--HB_Color_HeaderText) !important;
+}
+
+/* H4 */
+.dnd-style.markdown-preview-view h4,
+.dnd-style.markdown-reading-view h4,
+.dnd-style.markdown-source-view .cm-header-4 {
+  font-size: 0.458cm !important;
+  line-height: 0.971em !important;
+  margin-top: 0.235cm !important;
+  color: var(--HB_Color_HeaderText) !important;
+}
+
+/* H5 */
+.dnd-style.markdown-preview-view h5,
+.dnd-style.markdown-reading-view h5,
+.dnd-style.markdown-source-view .cm-header-5 {
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 0.423cm !important;
+  font-variant: small-caps !important;
+  line-height: 0.951em !important;
+  margin-top: 0.2cm !important;
+  color: var(--HB_Color_HeaderText) !important;
+}
+
+/* ============================================ */
+/* ===== СПИСКИ ===== */
+/* ============================================ */
+
+.dnd-style.markdown-preview-view ul,
+.dnd-style.markdown-preview-view ol,
+.dnd-style.markdown-reading-view ul,
+.dnd-style.markdown-reading-view ol {
+  padding-left: 1.4em !important;
+  margin-bottom: 0.8em !important;
+  line-height: 1.25em !important;
+}
+
+.dnd-style.markdown-preview-view li,
+.dnd-style.markdown-reading-view li,
+.dnd-style.markdown-source-view .HyperMD-list-line {
+  color: var(--HB_Color_Text) !important;
+}
+
+.dnd-style.markdown-preview-view li::marker,
+.dnd-style.markdown-reading-view li::marker,
+.dnd-style.markdown-source-view .cm-formatting-list {
+  color: var(--HB_Color_HeaderText) !important;
+}
+
+/* ============================================ */
+/* ===== ЖИРНЫЙ И КУРСИВ ===== */
+/* ============================================ */
+
+.dnd-style.markdown-preview-view strong,
+.dnd-style.markdown-reading-view strong,
+.dnd-style.markdown-source-view .cm-strong {
+  font-weight: bold !important;
+  letter-spacing: -0.02em !important;
+  color: var(--HB_Color_HeaderText) !important;
+}
+
+.dnd-style.markdown-preview-view em,
+.dnd-style.markdown-reading-view em,
+.dnd-style.markdown-source-view .cm-em {
+  color: var(--HB_Color_Text) !important;
+}
+
+/* ============================================ */
+/* ===== ССЫЛКИ ===== */
+/* ============================================ */
+
+.dnd-style.markdown-preview-view a,
+.dnd-style.markdown-reading-view a,
+.dnd-style.markdown-source-view .cm-link,
+.dnd-style.markdown-source-view .cm-hmd-internal-link {
+  color: var(--HB_Color_HeaderText) !important;
+  text-decoration: underline !important;
+  text-decoration-color: var(--HB_Color_HeaderUnderline) !important;
+}
+
+/* ============================================ */
+/* ===== ТАБЛИЦЫ ===== */
+/* ============================================ */
+
+.dnd-style.markdown-preview-view table,
+.dnd-style.markdown-reading-view table {
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 0.318cm !important;
+  line-height: 16px !important;
+  width: 100% !important;
+  border-collapse: collapse !important;
+}
+
+.dnd-style.markdown-preview-view thead,
+.dnd-style.markdown-reading-view thead {
+  font-weight: 800 !important;
+}
+
+.dnd-style.markdown-preview-view th,
+.dnd-style.markdown-reading-view th {
+  padding: 0 1.5px !important;

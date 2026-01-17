@@ -1,5 +1,5 @@
 {
-  "cssTheme": "Fancy-a-Story",
+  "cssTheme": "",
   "theme": "obsidian",
   "enabledCssSnippets": [
     "preview-default",
@@ -12,7 +12,8 @@
     "npc-portrait",
     "S - Images Adjustments",
     "MCL Multi Column",
-    "bases-cards-bg"
+    "bases-cards-bg",
+    "dnd-homebrewery"
   ],
   "accentColor": ""
 }
