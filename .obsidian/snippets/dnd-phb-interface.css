@@ -869,18 +869,321 @@ a {
 
 
 /* ══════════════════════════════════════════════════════════════════════
-   АДАПТАЦИЯ: Тёмная тема Obsidian
+   АДАПТАЦИЯ: Тёмная тема — «Древний Фолиант»
+   Стиль тёмной кожаной обложки, золотой текст на тёмном пергаменте.
    ══════════════════════════════════════════════════════════════════════ */
+
+/* -- Переопределение переменных ---------------------------------------- */
 .theme-dark {
-  --phb-parchment:       #2a1c10;
-  --phb-parchment-light: #321f12;
-  --phb-parchment-mid:   #251810;
-  --phb-parchment-dark:  #1e1209;
-  --phb-brown:           #e8d5a8;
-  --phb-brown-muted:     #c4a87a;
-  --phb-sidebar-bg:      #221510;
-  --phb-sidebar-border:  #6b4c20;
-  --phb-note-bg:         #2e1e12;
-  --phb-gold:            #c8b878;
-  --phb-gold-dark:       #a09050;
+  --phb-parchment:        #1e1208;   /* Основной тёмный фон */
+  --phb-parchment-light:  #251608;   /* Чуть светлее */
+  --phb-parchment-mid:    #1a0f07;   /* Средний тёмный */
+  --phb-parchment-dark:   #140c05;   /* Самый тёмный */
+  --phb-brown:            #e8d5a0;   /* Основной текст — светлый пергамент */
+  --phb-brown-muted:      #b89868;   /* Приглушённый текст */
+  --phb-red:              #c0291a;   /* Ярче красный для контраста на тёмном */
+  --phb-red-ui:           #a82418;
+  --phb-red-hover:        #d4392a;
+  --phb-gold:             #d4b86a;   /* Золото ярче */
+  --phb-gold-dark:        #a88c48;
+  --phb-sidebar-bg:       #180e06;
+  --phb-sidebar-border:   #5a3e18;
+  --phb-note-bg:          #221408;
+  --phb-dark-bg:          #0e0804;
+
+  /* Obsidian-переменные для тёмной темы */
+  --background-primary:            #1e1208;
+  --background-primary-alt:        #251608;
+  --background-secondary:          #180e06;
+  --background-secondary-alt:      #140c05;
+  --background-modifier-border:    #5a3e18;
+  --background-modifier-hover:     rgba(192, 41, 26, 0.12);
+  --text-normal:   #e8d5a0;
+  --text-muted:    #b89868;
+  --text-faint:    #7a6030;
+  --text-accent:   #c0291a;
+  --text-accent-hover: #d4392a;
+  --h1-color: #c0291a;
+  --h2-color: #c0291a;
+  --h3-color: #c0291a;
+  --h4-color: #e8d5a0;
+  --h5-color: #e8d5a0;
+  --bold-color: #d4b86a;
+  --link-color: #c0291a;
+  --link-color-hover: #d4392a;
+  --link-unresolved-color: #a88c48;
+  --tag-background: #6b1a10;
+  --tag-color: #e8d5a0;
+  --tag-border-color: #a88c48;
+  --code-background: rgba(212, 184, 106, 0.08);
+  --code-normal: #d4b86a;
+}
+
+/* -- Пергаментная текстура для тёмного фона ---------------------------- */
+.theme-dark .workspace-leaf-content[data-type="markdown"],
+.theme-dark .markdown-preview-view,
+.theme-dark .markdown-source-view .cm-scroller {
+  background-color: #1e1208;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.25) 100%);
+}
+
+/* -- Заголовок H1 на тёмной теме --------------------------------------- */
+.theme-dark .markdown-preview-view h1,
+.theme-dark .markdown-reading-view h1 {
+  background: linear-gradient(
+    to bottom,
+    rgba(212, 184, 106, 0.04),
+    rgba(212, 184, 106, 0.1) 40%,
+    rgba(212, 184, 106, 0.1) 60%,
+    rgba(212, 184, 106, 0.04)
+  );
+  text-shadow: 0 0 12px rgba(192, 41, 26, 0.3), 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.theme-dark .markdown-preview-view h1::before,
+.theme-dark .markdown-preview-view h1::after {
+  color: #d4b86a;
+}
+
+/* -- Цитаты (blockquote) ----------------------------------------------- */
+.theme-dark .markdown-preview-view blockquote,
+.theme-dark .markdown-reading-view blockquote {
+  background: linear-gradient(
+    135deg,
+    rgba(90, 62, 24, 0.4),
+    rgba(70, 48, 16, 0.3)
+  );
+  box-shadow:
+    inset 2px 2px 0 rgba(212, 184, 106, 0.2),
+    inset -2px -2px 0 rgba(212, 184, 106, 0.2),
+    1px 2px 6px rgba(0, 0, 0, 0.4);
+  color: #d4c88a;
+}
+
+.theme-dark .markdown-preview-view blockquote::before {
+  color: #d4b86a;
+  opacity: 0.25;
+}
+
+.theme-dark .markdown-preview-view blockquote p:last-child {
+  color: #a88c48;
+}
+
+/* -- Callout-блоки ----------------------------------------------------- */
+.theme-dark .callout {
+  background: linear-gradient(135deg, #3a2810 0%, #2e1e0a 100%) !important;
+  box-shadow:
+    2px 3px 10px rgba(0, 0, 0, 0.5),
+    inset 0 0 0 1px rgba(212, 184, 106, 0.35),
+    inset 0 0 0 3px rgba(255, 255, 255, 0.04) !important;
+}
+
+.theme-dark .callout::before {
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(192, 41, 26, 0.5),
+    transparent
+  );
+}
+
+.theme-dark .callout-title {
+  color: #d4b86a !important;
+  border-bottom-color: rgba(212, 184, 106, 0.3) !important;
+}
+
+.theme-dark .callout-content {
+  color: #d4c88a !important;
+}
+
+/* -- Таблицы ------------------------------------------------------------ */
+.theme-dark .markdown-preview-view thead th,
+.theme-dark .markdown-reading-view thead th {
+  background-color: #6b1a10;
+  border-color: #4a1008;
+  color: #f0e0b0;
+}
+
+.theme-dark .markdown-preview-view tbody tr:nth-child(odd) td,
+.theme-dark .markdown-reading-view tbody tr:nth-child(odd) td {
+  background-color: #1e1208;
+  color: #e8d5a0;
+}
+
+.theme-dark .markdown-preview-view tbody tr:nth-child(even) td,
+.theme-dark .markdown-reading-view tbody tr:nth-child(even) td {
+  background-color: #251608;
+  color: #e8d5a0;
+}
+
+.theme-dark .markdown-preview-view td,
+.theme-dark .markdown-reading-view td {
+  border-color: #3a2810;
+  color: #e8d5a0;
+}
+
+.theme-dark .markdown-preview-view tbody tr:hover td,
+.theme-dark .markdown-reading-view tbody tr:hover td {
+  background-color: rgba(192, 41, 26, 0.1);
+}
+
+/* -- Inline code ------------------------------------------------------- */
+.theme-dark .markdown-preview-view code,
+.theme-dark .markdown-reading-view code {
+  background: rgba(212, 184, 106, 0.08);
+  border-color: rgba(212, 184, 106, 0.2);
+  color: #d4b86a;
+}
+
+/* -- Буллеты ----------------------------------------------------------- */
+.theme-dark .markdown-preview-view ul > li::before,
+.theme-dark .markdown-reading-view ul > li::before {
+  color: #c0291a;
+}
+
+.theme-dark .markdown-preview-view ul ul > li::before,
+.theme-dark .markdown-reading-view ul ul > li::before {
+  color: #a88c48;
+}
+
+.theme-dark .markdown-preview-view ol > li::marker,
+.theme-dark .markdown-reading-view ol > li::marker {
+  color: #c0291a;
+}
+
+/* -- Drop cap ---------------------------------------------------------- */
+.theme-dark .markdown-preview-view
+  > .markdown-preview-section
+  > div:first-of-type
+  > p:first-of-type::first-letter {
+  color: #c0291a;
+  text-shadow: 0 0 10px rgba(192, 41, 26, 0.4), 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* -- Боковая панель ---------------------------------------------------- */
+.theme-dark .nav-files-container,
+.theme-dark .workspace-leaf-content[data-type="file-explorer"] {
+  background-color: #180e06 !important;
+}
+
+.theme-dark .nav-folder-title {
+  color: #c0291a !important;
+}
+
+.theme-dark .nav-folder-title:hover {
+  background-color: rgba(192, 41, 26, 0.12) !important;
+  color: #d4392a !important;
+}
+
+.theme-dark .nav-folder-title.is-active,
+.theme-dark .nav-file-title.is-active {
+  background-color: rgba(192, 41, 26, 0.18) !important;
+  color: #d4b86a !important;
+}
+
+.theme-dark .nav-file-title {
+  color: #c8aa78 !important;
+}
+
+.theme-dark .nav-file-title:hover {
+  background-color: rgba(192, 41, 26, 0.1) !important;
+  color: #d4b86a !important;
+}
+
+.theme-dark .nav-folder-collapse-indicator {
+  color: #a88c48 !important;
+}
+
+.theme-dark .nav-folder-children {
+  border-left-color: #3a2810 !important;
+}
+
+/* -- Свойства заметки -------------------------------------------------- */
+.theme-dark .metadata-container {
+  background: linear-gradient(135deg, #251608, #1e1208) !important;
+  border-color: #5a3e18 !important;
+}
+
+.theme-dark .metadata-property-key {
+  color: #d4b86a !important;
+}
+
+.theme-dark .metadata-property-value {
+  color: #d4c88a !important;
+}
+
+/* -- Поиск и модалки --------------------------------------------------- */
+.theme-dark .modal-container .modal {
+  background-color: #1e1208 !important;
+  border-color: #5a3e18 !important;
+}
+
+.theme-dark .modal-title {
+  color: #d4b86a !important;
+  border-bottom-color: #5a3e18 !important;
+}
+
+.theme-dark .prompt-input,
+.theme-dark .search-input,
+.theme-dark input[type="text"],
+.theme-dark input[type="search"] {
+  background: #251608 !important;
+  border-color: #5a3e18 !important;
+  color: #e8d5a0 !important;
+}
+
+.theme-dark .suggestion-item {
+  color: #d4c88a !important;
+}
+
+.theme-dark .suggestion-item.is-selected {
+  background-color: rgba(192, 41, 26, 0.15) !important;
+  color: #d4b86a !important;
+}
+
+/* -- Скроллбар --------------------------------------------------------- */
+.theme-dark ::-webkit-scrollbar-track {
+  background: #140c05;
+}
+
+.theme-dark ::-webkit-scrollbar-thumb {
+  background: #5a3e18;
+  border-color: #1e1208;
+}
+
+.theme-dark ::-webkit-scrollbar-thumb:hover {
+  background: #8b2214;
+}
+
+/* -- Рибон ------------------------------------------------------------- */
+.theme-dark .workspace-ribbon {
+  background: linear-gradient(to right, #0e0804, #180e06) !important;
+  border-right-color: #3a2810 !important;
+}
+
+.theme-dark .workspace-ribbon .side-dock-ribbon-action {
+  color: #7a5830 !important;
+}
+
+.theme-dark .workspace-ribbon .side-dock-ribbon-action:hover {
+  color: #d4b86a !important;
+  background-color: rgba(212, 184, 106, 0.08) !important;
+}
+
+/* -- Ссылки ------------------------------------------------------------ */
+.theme-dark .markdown-preview-view a.internal-link,
+.theme-dark .markdown-preview-view a.external-link {
+  color: #c0291a !important;
+  border-bottom-color: #a88c48;
+}
+
+.theme-dark .markdown-preview-view a.internal-link:hover,
+.theme-dark .markdown-preview-view a.external-link:hover {
+  color: #d4392a !important;
+}
+
+.theme-dark .markdown-preview-view a.internal-link.is-unresolved {
+  color: #a88c48 !important;
 }
