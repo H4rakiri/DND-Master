@@ -34,9 +34,21 @@
               "icon": "lucide-file",
               "title": "08 - Часть восьмая - \"Однажды я не вернусь\""
             }
+          },
+          {
+            "id": "58f275bdd58c08c8",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "примечания к выпуску 1.11.4"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -262,7 +274,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d90ff435f1c914bf",
+  "active": "58f275bdd58c08c8",
   "lastOpenFiles": [
     "02 - Ваншоты/Однажды я не вернусь/01 - Сюжет/07 - Часть седьмая - \"У далеких вершин\".md",
     "02 - Ваншоты/Однажды я не вернусь/01 - Сюжет/08 - Часть восьмая - \"Однажды я не вернусь\".md",
