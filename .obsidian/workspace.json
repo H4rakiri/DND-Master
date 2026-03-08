@@ -110,8 +110,8 @@
             "state": {
               "type": "loot-generator-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Генератор добычи"
+              "icon": "lucide-ghost",
+              "title": "loot-generator-view"
             }
           },
           {
@@ -120,8 +120,8 @@
             "state": {
               "type": "DICE_ROLLER_VIEW",
               "state": {},
-              "icon": "dices",
-              "title": "Dice Tray"
+              "icon": "lucide-ghost",
+              "title": "DICE_ROLLER_VIEW"
             }
           },
           {
@@ -130,8 +130,8 @@
             "state": {
               "type": "exp-calculator-view",
               "state": {},
-              "icon": "dice",
-              "title": "Experience Calculator"
+              "icon": "lucide-ghost",
+              "title": "exp-calculator-view"
             }
           },
           {
@@ -140,8 +140,8 @@
             "state": {
               "type": "initiative-tracker-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Трекер Инициативы и ХП"
+              "icon": "lucide-ghost",
+              "title": "initiative-tracker-view"
             }
           },
           {
@@ -213,6 +213,16 @@
             "state": {
               "type": "DICE_ROLLER_VIEW",
               "state": {},
+              "icon": "lucide-ghost",
+              "title": "DICE_ROLLER_VIEW"
+            }
+          },
+          {
+            "id": "08bca160776ef7e7",
+            "type": "leaf",
+            "state": {
+              "type": "DICE_ROLLER_VIEW",
+              "state": {},
               "icon": "dices",
               "title": "Dice Tray"
             }
@@ -230,8 +240,8 @@
             "state": {
               "type": "side-panel-control-view",
               "state": {},
-              "icon": "viewIcon",
-              "title": "Markdown-Autocomplete"
+              "icon": "lucide-ghost",
+              "title": "side-panel-control-view"
             }
           }
         ]
