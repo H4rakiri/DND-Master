@@ -238,8 +238,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 403.5,
-    "collapsed": true
+    "width": 403.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -262,7 +261,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4a45a0a156021b3a",
+  "active": "d90ff435f1c914bf",
   "lastOpenFiles": [
     "02 - Ваншоты/Однажды я не вернусь/01 - Сюжет/06 - Часть шестая.md",
     "02 - Ваншоты/Жертвенные слезы/Сюжет.md",
