@@ -250,7 +250,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 403.5
+    "width": 313.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -273,7 +273,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c351b199a5e40b4a",
+  "active": "d90ff435f1c914bf",
   "lastOpenFiles": [
     "99 - Общие ресурсы/01 - Бестиарий/Существа/Разбойник.md",
     "02 - Ваншоты/Жертвенные слезы/Сюжет.md",
