@@ -8,34 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5eea49ad312024ee",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99 - Общие ресурсы/01 - Бестиарий/Существа/Зелёная карга.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Зелёная карга"
-            }
-          },
-          {
-            "id": "d90ff435f1c914bf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02 - Ваншоты/Жертвенные слезы/Сюжет.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Сюжет"
-            }
-          },
-          {
             "id": "a0812244a6be6634",
             "type": "leaf",
             "state": {
@@ -48,23 +20,8 @@
               "icon": "lucide-file",
               "title": "НЕ ВСЕ МОНСТРЫ — ЧУДОВИЩА"
             }
-          },
-          {
-            "id": "413bfd12d9e9b15c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99 - Общие ресурсы/99 - Остальное/Генераторы/Генератор домов с лутом.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Генератор домов с лутом"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
